@@ -1,0 +1,30 @@
+add{
+    display: flex;
+    justify-content: center;
+    height: 13em;
+    align-items: center;
+
+    border: 1px solid #707070;
+}
+section2{
+    background-color: #f7eeee;
+    display: flex;
+    flex-direction: column;
+
+}
+rec{
+    display: flex;
+    justify-content: center;
+    height: 15em;
+    align-items: center;
+    background-color: #f7eeee;
+    border: 1px solid #707070;
+}
+best{
+    display: flex;
+    justify-content: center;
+    height: 15em;
+    align-items: center;
+    background-color: #f7eeee;
+    border: 1px solid #707070;
+}
