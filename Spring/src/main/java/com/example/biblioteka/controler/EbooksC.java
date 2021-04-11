@@ -1,6 +1,6 @@
 package com.example.biblioteka.controler;
 
-import net.javaguides.library.model.Books;
+import com.example.biblioteka.model.Books;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,15 +16,15 @@ public class EbooksC {
 
     @GetMapping("/Ebook/{id}")
     public Books getAudioBooks(@PathVariable int id){
-        return new Books("wiedzmin", "Sapkowski","NowaEra","super ksiazka",
-                22,"Fantazy","Fantazy","Audiobooks", id=1);
+        return new Books("wiedzmin", "book",21,22,
+                "fantazy",id=1);
     }
     @RequestMapping(value = "/Ebook")
     public List<Books> getAll(){
-        Books book1= new Books("wiedzmin", "Sapkowski","NowaEra","super ksiazka",
-                22,"Fantazy","Fantazy","Audiobooks", 1);
-        Books book2= new Books("wiedzmin2", "Sapkowski","NowaEra","super ksiazka",
-                22,"Fantazy","Fantazy","Audiobooks", 2);
+        Books book1= new Books("wiedzmin", "book",21,11,
+                "fantazy",1);
+        Books book2= new Books("wiedzmin", "book",21,22,
+                "fantazy",2);
         return Arrays.asList(book1,book2);
 
     }

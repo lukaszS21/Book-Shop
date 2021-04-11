@@ -1,100 +1,92 @@
 package com.example.biblioteka.model;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+
+@Entity
+@Table(name="book")
 public class Books {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id_BOOK;
 
+    @NotEmpty
+    @Column
+    private String TITLE;
 
-    private String title;
-    private String author;
-    private String publishing;//publishinghouse
-    private String description;
-    private float price;
-    private String photo;
+    @NotEmpty
+    @Column
     private String category;
-    private String type;
-    private Long id;
-    public Books(String title, String author, String publishing,String description,float price,String photo,String category,String type,long id) {
-        this.title = title;
-        this.author = author;
-        this.publishing = publishing;
-        this.description = description;
-        this.price = price;
-        this.photo = photo;
+
+
+    @NotEmpty
+    @Column
+    private float PRICE;
+
+
+    @NotEmpty
+    @Column
+    private int QUANTITY;
+
+    @NotEmpty
+    @Column
+    private String DESCRIPTION;
+    public Books() {
+    }
+    public Books(String TITLE,  String DESCRIPTION,float PRICE,int QUANTITY,String category,long id_BOOK) {
+        this.TITLE= TITLE;
+        this.DESCRIPTION = DESCRIPTION;
+        this.PRICE = PRICE;
+        this.QUANTITY = QUANTITY;
         this.category = category;
-        this.type = type;
-        this.id = id;
+        this.id_BOOK = id_BOOK;
     }
 
-    public String getType() {
-        return type;
+    public Long getId_BOOK() {
+        return id_BOOK;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setId_BOOK(Long id_BOOK) {
+        this.id_BOOK = id_BOOK;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public String getTITLE() {
+        return TITLE;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setTITLE(String TITLE) {
+        this.TITLE = TITLE;
     }
 
-    public void setPublishing(String publishing) {
-        this.publishing = publishing;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setPrice(float price) {
-        this.price = price;
-    }
-
-    public void setPhoto(String photo) {
-        this.photo = photo;
+    public String getCategory() {
+        return category;
     }
 
     public void setCategory(String category) {
         this.category = category;
     }
 
-    public String getTitle() {
-        return title;
+    public float getPRICE() {
+        return PRICE;
     }
 
-    public String getAuthor() {
-        return author;
+    public void setPRICE(float PRICE) {
+        this.PRICE = PRICE;
     }
 
-    public String getPublishing() {
-        return publishing;
+    public int getQUANTITY() {
+        return QUANTITY;
     }
 
-    public String getDescription() {
-        return description;
+    public void setQUANTITY(int QUANTITY) {
+        this.QUANTITY = QUANTITY;
     }
 
-    public float getPrice() {
-        return price;
+    public String getDESCRIPTION() {
+        return DESCRIPTION;
     }
 
-    public String getPhoto() {
-        return photo;
+    public void setDESCRIPTION(String DESCRIPTION) {
+        this.DESCRIPTION = DESCRIPTION;
     }
-
-    public String getCategory() {
-        return category;
-    }
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-
-
 }

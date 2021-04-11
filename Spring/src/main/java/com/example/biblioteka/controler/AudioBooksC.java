@@ -1,31 +1,33 @@
 package com.example.biblioteka.controler;
 
-import net.javaguides.library.model.Books;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.biblioteka.model.Books;
 
-import java.util.Arrays;
+
+import com.example.biblioteka.repository.BookRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import com.sun.istack.Nullable;
+import org.springframework.web.bind.annotation.*;
+import java.util.Optional;
+import java.util.ArrayList;
 import java.util.List;
 
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
+@RequestMapping("/books")
 public class AudioBooksC {
-
-    @GetMapping("/AudioBooks/{id}")
-    public Books getAudioBooks(@PathVariable int id){
-        return new Books("wiedzmin", "Sapkowski","NowaEra","super ksiazka",
-                22,"Fantazy","Fantazy","Audiobooks", id=1);
+    private final BookRepository bookRepository;
+    @Autowired
+    public AudioBooksC(BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
     }
-    @RequestMapping(value = "/AudioBooks")
-    public List<Books> getAll(){
-        Books book1= new Books("wiedzmin", "Sapkowski","NowaEra","super ksiazka",
-                22,"Fantazy","Fantazy","Audiobooks", 1);
-        Books book2= new Books("wiedzmin2", "Sapkowski","NowaEra","super ksiazka",
-                22,"Fantazy","Fantazy","Audiobooks", 2);
-        return Arrays.asList(book1,book2);
 
+    @GetMapping("/all")
+    public List<Books> getBooks(){
+        List<Books> book = new ArrayList<>();
+        bookRepository.findAll().forEach(book::add);
+        return book;
     }
+
 
 }

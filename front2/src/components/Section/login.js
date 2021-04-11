@@ -12,8 +12,10 @@ export class login extends Component{
                         <div className="Login2">
                             <text>Log In</text>
                         </div>
-                        <div className="colorText">
-                            Sign Up
+                        <div className="colorText" >
+                            <a className={"colorText"} href={"register"}>
+                                SignUP
+                            </a>
                         </div>
                     </div>
                     <div className="Input2">
