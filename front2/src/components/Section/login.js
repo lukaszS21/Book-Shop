@@ -4,7 +4,7 @@ import './login.css'
 export class login extends Component{
     render() {
         return (
-            <section2>
+            <div className={"section2"}>
                 <div className="Back">
 
                     <div className="Login">
@@ -34,7 +34,7 @@ export class login extends Component{
                         <button className="ButtonLog">Log in</button>
                     </div>
                 </div>
-            </section2>
+            </div>
 
         );
     }

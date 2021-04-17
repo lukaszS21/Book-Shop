@@ -11,7 +11,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
-@RequestMapping("/users")
+//@RequestMapping("/users")
 public class UserController {
     private final UserRepository userRepository;
     @Autowired
@@ -30,6 +30,10 @@ public class UserController {
         Optional<User> optionalUser = userRepository.findById(id);
 
         return optionalUser.orElse(null);
+    }
+    @GetMapping("/users")
+    public Iterable<User> getUser2(){
+        return userRepository.findAll();
     }
 
 }

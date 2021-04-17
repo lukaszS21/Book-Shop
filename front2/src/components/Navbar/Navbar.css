@@ -53,7 +53,7 @@ word{
     font-family: cursive;
     color: black;
 }
-li2{
+.li2{
     text-align: left;
     font: normal normal normal 20px/30px Segoe UI;
     letter-spacing: 0px;
@@ -61,7 +61,7 @@ li2{
     margin: 1em;
     justify-content: right;
 }
-li3{
+.nav-links3{
     padding: 0.2em;
     font-family: cursive;
     color: black;
@@ -102,12 +102,12 @@ img{
     margin-block-start: 0em;
     padding-inline-start: 0em;
 }
-li{
+.li{
     margin-right: 2em;
     color: black;
 
 }
-a{
+.a{
     font-family: cursive;
     color: black;
     text-decoration: none;

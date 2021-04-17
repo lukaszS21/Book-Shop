@@ -4,17 +4,17 @@ import React,{Component} from 'react';
 export class home extends Component{
     render() {
         return (
-            <section2>
-                <add>
+            <div className={"section2"}>
+                <div className={"add"}>
                     <word>Reklama ksiazek</word>
-                </add>
-                <rec>
+                </div>
+                <div className={"rec"}>
                     Polecane
-                </rec>
-                <best>
+                </div>
+                <div className={"best"}>
                     Najlepsze Audiobooki
-                </best>
-            </section2>
+                </div>
+            </div>
 
         );
     }

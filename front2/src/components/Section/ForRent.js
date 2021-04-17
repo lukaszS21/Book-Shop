@@ -5,13 +5,13 @@ import Book from "./Book/Book";
 export class ForRent extends Component{
     render() {
         return (
-            <section>
+            <div className={"section"}>
                 <div className="Content">
                     <Lista/>
                     <Book/>
                 </div>
 
-            </section>
+            </div>
 
         );
     }

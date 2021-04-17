@@ -6,7 +6,7 @@
     height: 12em;
     align-items: end;
 }
-foot{
+.foot{
     margin-left: 5em;
     display: flex;
     flex-direction: column;

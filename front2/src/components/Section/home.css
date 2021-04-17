@@ -1,4 +1,4 @@
-add{
+.add{
     display: flex;
     justify-content: center;
     height: 13em;
@@ -6,13 +6,13 @@ add{
 
     border: 1px solid #707070;
 }
-section2{
+.section2{
     background-color: #f7eeee;
     display: flex;
     flex-direction: column;
 
 }
-rec{
+.rec{
     display: flex;
     justify-content: center;
     height: 15em;
@@ -20,7 +20,7 @@ rec{
     background-color: #f7eeee;
     border: 1px solid #707070;
 }
-best{
+.best{
     display: flex;
     justify-content: center;
     height: 15em;

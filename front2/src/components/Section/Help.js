@@ -4,9 +4,9 @@ import React,{Component} from 'react';
 export class Help extends Component{
     render() {
         return (
-            <section2>
+            <div className={"section2"}>
                 pomoc
-            </section2>
+            </div>
 
         );
     }
