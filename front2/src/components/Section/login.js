@@ -1,6 +1,7 @@
 
 import React,{Component} from 'react';
 import './login.css'
+import {Link} from "react-router-dom";
 export class login extends Component{
     render() {
         return (
@@ -13,9 +14,10 @@ export class login extends Component{
                             <text>Log In</text>
                         </div>
                         <div className="colorText" >
-                            <a className={"colorText"} href={"register"}>
+
+                            <Link  className={"colorText"}to='/register'>
                                 SignUP
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="Input2">

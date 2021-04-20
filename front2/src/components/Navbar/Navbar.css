@@ -48,18 +48,20 @@ input[placeholder="search"]{
 }
 
 
-word{
+.word{
     padding: 0.2em;
     font-family: cursive;
     color: black;
 }
 .li2{
+    display:flex;
+    width: 50%;
     text-align: left;
     font: normal normal normal 20px/30px Segoe UI;
     letter-spacing: 0px;
     color: #707070;
     margin: 1em;
-    justify-content: right;
+    justify-content: flex-end;
 }
 .nav-links3{
     padding: 0.2em;
@@ -108,10 +110,16 @@ img{
 
 }
 .a{
+    margin-right: 3em;
     font-family: cursive;
     color: black;
     text-decoration: none;
 }
 .fa.fa-cart-arrow-down{
     font-size: xxx-large;
+}
+.nav{
+    align-items: center;
+    display: flex;
+
 }

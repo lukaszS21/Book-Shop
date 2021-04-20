@@ -13,28 +13,46 @@ import CurseBook from "./components/Section/CurseBook";
 import Comics from "./components/Section/Comics"
 import Help from "./components/Section/Help";
 import login from "./components/Section/login";
+import register from "./components/Section/register";
 const api = axios.create({
     baseURL: `http://localhost:8080`
 })
 class App extends React.Component{
-    state = {
-        users: []
-    }
+
 
     constructor(){
         super();
+        this.state = {
+            users: []
+        }
+        console.log("cons"+this.state.users);
+
         api.get('/users').then(response => response.data)
             .then((data) => {
                 //console.log(this.state.users);
                 this.setState({users: data})
                 console.log(this.state.users);
             })
-        //console.log(this.state.users);
+
+        console.log(this.state.users);
+
+
+    }
+    componentDidMount() {
+        api.get('/users').then(response => response.data)
+            .then((data) => {
+                //console.log(this.state.users);
+                this.setState({users: data})
+                console.log(this.state.users);
+            })
+        console.log(this.state.users);
         //console.log(this.state.users);
 
 
     }
-  render() {
+
+
+    render() {
 
       return (
         <>
@@ -53,13 +71,15 @@ class App extends React.Component{
                     <Route path='/Comics' component={Comics}/>
                     <Route path='/Login' component={login}/>
                     <Route path='/Help' component={Help}/>
+                    <Route path='/register' component={register}/>
 
                 </Switch>
                 <PageFooter/>
             </BrowserRouter>
             <div>
-                eo
+                here
                 <p>
+
                     {this.state.users.values()}
                 </p>
             </div>

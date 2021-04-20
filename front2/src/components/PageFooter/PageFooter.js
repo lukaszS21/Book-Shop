@@ -17,9 +17,9 @@ class PageFooter extends Component{
                         <i className="fa fa-envelope">lukaszstolarz@op.pl</i>
                         <i className="fa fa-clock">poniedziałek-piątek 11:00-23:00</i>
                     </div>
-                    <text>
+                    <div className={"text"}>
 
-                    </text>
+                    </div>
 
             </nav>
         )

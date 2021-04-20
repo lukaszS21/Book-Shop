@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
-import {MenuItems} from "./MenuItems"
+
 import './Navbar.css'
-import {Menulog} from "./Menulog";
+
 import logo3 from "../../logo3.png";
 import {Link} from "react-router-dom";
 
@@ -15,16 +15,25 @@ class Navbar extends Component {
 
                 <header className="App-header">
                     <ul className={"li2"}>
+                        <div className={"nav"}>
+                            <i className="fa fa-user"></i>
+                            <Link className='a' to='/login'>
+                                MyAcount
+                            </Link>
+                        </div>
+                       <div className={"nav"}>
+                           <i className="fa fa-question-circle" styleName={"icon"}></i>
+                           <Link className='a' to='/Help'>
+                               Help
+                           </Link>
+                       </div>
+                        <div className={"nav"}>
+                            <i className={"fa fa-sign-in"}  ></i>
+                            <Link className='a' to='/login'>
+                                Login/Register
+                            </Link>
+                        </div>
 
-                        <Link className='a' to='/login'>
-                            MyAcount
-                        </Link>
-                        <Link className='a' to='/Help'>
-                            Help
-                        </Link>
-                        <Link className='a' to='/login'>
-                            Login/Register
-                        </Link>
                     </ul>
                 </header>
                     <div className="Search">
@@ -35,23 +44,23 @@ class Navbar extends Component {
 
                         <p>
                             <i className="fa fa-cart-arrow-down"></i>
-                            <li3>
+                            <div className={"li3"}>
                                 <a className={"nav-links"} href={"Cart"}>{"Cart"}
 
                                 </a>
-                            </li3>
+                            </div>
 
                         </p>
                     </div>
                         <ul className={"navi"}>
                             <li>
                                 <Link className='a' to='/home'>
-                                    home
+                                    Home
                                 </Link>
                             </li>
                             <li>
                                 <Link className='a' to='/ebooks'>
-                                    ebooks
+                                    Ebooks
                                 </Link>
 
                             </li>

@@ -1,37 +1,22 @@
 
 import React,{Component} from 'react';
 import './Book.css'
+import One from "../../img/1.jpg"
+import Book1 from "./Book1"
 export class Book extends Component{
     render() {
         return (
-            <section3>
+            <div className="section3">
                 <div className="Content2">
-                    <div className="Books" >
-                        1
+                    <Book1/>
+                    <Book1/>
+                    <Book1/>
+                    <Book1/>
+                    <Book1/>
+                    <Book1/>
 
-                    </div>
-                    <div className="Books" >
-                        2
-
-                    </div>
-                    <div className="Books" >
-                        3
-
-                    </div>
-                    <div className="Books" >
-                        4
-
-                    </div>
-                    <div className="Books" >
-                        5
-
-                    </div>
-                    <div className="Books" >
-                        6
-
-                    </div>
                 </div>
-            </section3>
+            </div>
 
         );
     }

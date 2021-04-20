@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78bb7064-3816-4c5f-ae02-45605c35d6d6" name="Default Changelist" comment="">
+    <list default="true" id="78bb7064-3816-4c5f-ae02-45605c35d6d6" name="Default Changelist" comment="React/improvement">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/MenuItems.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Menulog.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PageFooter/PageFooter.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageFooter/PageFooter.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PageFooter/PageFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageFooter/PageFooter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/AudioBooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/AudioBooks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/Comics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Comics.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/CurseBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/CurseBook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/Ebooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Ebooks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/ForRent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/ForRent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/Help.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Help.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/Book.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/Book.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/Book.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/Book.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Section/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vievs/shop1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/vievs/shop1.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -57,6 +50,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kokol\OneDrive\Pulpit\Zpai2\front2\src\components\img" />
+      <recent name="C:\Users\kokol\OneDrive\Pulpit\Zpai2\front2\src\components\Section\Book" />
       <recent name="C:\Users\kokol\OneDrive\Pulpit\Zpai2\front2\src\components\Section" />
     </key>
   </component>
@@ -92,10 +87,40 @@
       <workItem from="1618564019067" duration="10000" />
       <workItem from="1618564032499" duration="33000" />
       <workItem from="1618686220898" duration="6819000" />
+      <workItem from="1618693213594" duration="190000" />
+      <workItem from="1618752909782" duration="729000" />
+      <workItem from="1618828687272" duration="1284000" />
+      <workItem from="1618845336783" duration="5544000" />
+      <workItem from="1618857007782" duration="1293000" />
+      <workItem from="1618896255374" duration="533000" />
     </task>
+    <task id="LOCAL-00001" summary="React/improvement">
+      <created>1618693294866</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1618693294866</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="React/improvement" />
+    <option name="LAST_COMMIT_MESSAGE" value="React/improvement" />
   </component>
 </project>
