@@ -14,7 +14,7 @@ import './Section/home.css'
 export class Section extends Component{
     render() {
         return (
-            <section>
+            <div className={"section"}>
                 <Route path="/home" component={home}/>
                 <Route path="/Audiobooks" component={AudioBooks}/>
                 <Route path="/Ebooks" component={Ebooks}/>
@@ -25,7 +25,7 @@ export class Section extends Component{
                 <Route path="/register" component={register}/>
                 <Route path="/Help" component={Help}/>
                 <Route path="/CurseBook" component={CurseBook}/>
-            </section>
+            </div>
 
         );
     }

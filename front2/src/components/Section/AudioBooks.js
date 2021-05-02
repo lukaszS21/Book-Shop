@@ -7,13 +7,13 @@ import PageFooter from "../PageFooter/PageFooter";
 export class AudioBooks extends Component{
     render() {
         return (
-            <section>
+            <div className={"section"}>
                     <div className="Content">
                         <Lista/>
                         <Book/>
 
                     </div>
-            </section>
+            </div>
 
         );
     }

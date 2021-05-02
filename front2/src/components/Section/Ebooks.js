@@ -5,12 +5,12 @@ import Book from "./Book/Book";
 export class Ebooks extends Component{
     render() {
         return (
-            <section>
+            <div className={"section"}>
                 <div className="Content">
                     <Lista/>
                     <Book/>
                 </div>
-            </section>
+            </div>
 
         );
     }

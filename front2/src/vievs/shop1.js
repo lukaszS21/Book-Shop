@@ -10,7 +10,7 @@ function shop1() {
             <Navbar/>
 
             <div className="Content">
-                <lista >
+                <div className={"lista"} >
                     <word>Sport</word>
                     <word>Science</word>
                     <word>Medicine</word>
@@ -30,7 +30,7 @@ function shop1() {
                     <word>Religion</word>
 
 
-                </lista>
+                </div>
                 <s>
                     <code>Help</code>
                 </s>

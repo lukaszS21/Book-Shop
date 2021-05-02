@@ -4,7 +4,7 @@ import './register.css'
 export class register extends Component{
     render() {
         return (
-            <section2>
+            <div className={"section2"}>
                 <div className="Back2">
 
 
@@ -38,7 +38,7 @@ export class register extends Component{
                         </a>
                     </div>
                 </div>
-            </section2>
+            </div>
 
         );
     }

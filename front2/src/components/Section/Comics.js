@@ -2,18 +2,18 @@
 import React,{Component} from 'react';
 import Lista from "./lista/Lista";
 import Book from "./Book/Book";
-export class Ebooks extends Component{
+export class Comics extends Component{
     render() {
         return (
-            <section>
+            <div className={"section"}>
                 <div className="Content">
                 <Lista/>
                 <Book/>
                 </div>
-            </section>
+            </div>
 
         );
     }
 }
 
-export default Ebooks;
+export default Comics;

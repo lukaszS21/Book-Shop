@@ -6,18 +6,22 @@
     height: 12em;
     align-items: end;
 }
-foot{
+.foot{
     margin-left: 5em;
     display: flex;
     flex-direction: column;
 }
-text{
+.text{
     display: flex;
     flex-direction: column;
 }
 i{
     margin-top: 10px;
+    font-size: xxx-large;
 }
 img{
     margin-top: 1em;
+}
+.fa{
+    font-size: large;
 }

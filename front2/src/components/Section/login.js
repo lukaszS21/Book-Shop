@@ -1,10 +1,11 @@
 
 import React,{Component} from 'react';
 import './login.css'
+import {Link} from "react-router-dom";
 export class login extends Component{
     render() {
         return (
-            <section2>
+            <div className={"section2"}>
                 <div className="Back">
 
                     <div className="Login">
@@ -13,9 +14,10 @@ export class login extends Component{
                             <text>Log In</text>
                         </div>
                         <div className="colorText" >
-                            <a className={"colorText"} href={"register"}>
+
+                            <Link  className={"colorText"}to='/register'>
                                 SignUP
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="Input2">
@@ -34,7 +36,7 @@ export class login extends Component{
                         <button className="ButtonLog">Log in</button>
                     </div>
                 </div>
-            </section2>
+            </div>
 
         );
     }
