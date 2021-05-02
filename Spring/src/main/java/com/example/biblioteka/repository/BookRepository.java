@@ -9,4 +9,5 @@ public interface BookRepository  extends CrudRepository<Books, Long> {
     Books getBooksByTITLE(String TITLE);
     @Query(value = "SELECT b.id_BOOK FROM book b WHERE TITLE=b.TITLE;", nativeQuery = true)
     String getTITLE(String TITLE);
+
 }

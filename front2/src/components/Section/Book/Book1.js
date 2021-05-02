@@ -1,28 +1,46 @@
 import One from "../../img/1.jpg";
-import React, {Component} from "react";
+import React, {Component, useEffect,useState} from "react";
 import './Book.css'
+import axios from "axios";
 
-export class Book1 extends Component{
-    render() {
+
+class Book1 extends React.Component {
+
+    constructor(props)
+    {
+        super(props);
+        this.state = {
+            book: {
+                id:props.book.id,
+                title:props.book.title
+
+            }
+        }
+
+
+    }
+
+
+    render()
+    {
         return (
-            <div className="Books" >
+
+            <div className="Books">
+
                 <div className={"image"}>
                     <img className={"ImgBook"} src={One} alt={""}/>
+
                 </div>
-                <div className={"content"}>
-                    <div >
-                        Title
+
+                    <div className={"content"}>
+                       <div>
+                           {
+                               this.state.book.title
+                           }
+                       </div>
                     </div>
-                    <div >
-                        Author
-                    </div>
-                    <div >
-                        Publishing house
-                    </div>
-                    <div className={"space"}>
-                        Description
-                    </div>
-                </div>
+
+
 
                 <div className={"shop"}>
                     <i className="fa fa-cart-arrow-down"></i>
@@ -32,5 +50,6 @@ export class Book1 extends Component{
         );
     }
 }
+
 
 export default Book1;

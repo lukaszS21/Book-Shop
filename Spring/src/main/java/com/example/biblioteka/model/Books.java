@@ -2,6 +2,7 @@ package com.example.biblioteka.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import java.util.Optional;
 
 @Entity
 @Table(name="book")
@@ -14,21 +15,21 @@ public class Books {
     @Column
     private String TITLE;
 
-    @NotEmpty
+
     @Column
     private String category;
 
 
-    @NotEmpty
+
     @Column
     private float PRICE;
 
 
-    @NotEmpty
+
     @Column
     private int QUANTITY;
 
-    @NotEmpty
+
     @Column
     private String DESCRIPTION;
     public Books() {
@@ -41,6 +42,8 @@ public class Books {
         this.category = category;
         this.id_BOOK = id_BOOK;
     }
+
+
 
     public Long getId_BOOK() {
         return id_BOOK;

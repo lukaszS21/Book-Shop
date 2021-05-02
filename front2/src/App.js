@@ -19,34 +19,26 @@ const api = axios.create({
 })
 class App extends React.Component{
 
-
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             users: []
         }
-        console.log("cons"+this.state.users);
-
-        api.get('/users').then(response => response.data)
-            .then((data) => {
-                //console.log(this.state.users);
-                this.setState({users: data})
-                console.log(this.state.users);
-            })
-
-        console.log(this.state.users);
-
 
     }
     componentDidMount() {
-        api.get('/users').then(response => response.data)
-            .then((data) => {
-                //console.log(this.state.users);
-                this.setState({users: data})
-                console.log(this.state.users);
-            })
-        console.log(this.state.users);
-        //console.log(this.state.users);
+        axios.get("http://localhost:8080/users").then((response)=>{
+            this.setState({users:response.data})
+            console.log(this.state.users);
+        });
+        // api.get('/users').then(response => response.data)
+        //     .then((data) => {
+        //         //console.log(this.state.users);
+        //         this.setState({users: data})
+        //         console.log(this.state.users);
+        //     })
+        // console.log(this.state.users);
+        // //console.log(this.state.users);
 
 
     }
@@ -77,11 +69,21 @@ class App extends React.Component{
                 <PageFooter/>
             </BrowserRouter>
             <div>
-                here
-                <p>
 
-                    {this.state.users.values()}
-                </p>
+                <div>
+
+                        {
+
+                            this.state.users.map(
+                                user =>
+                                    <tr key ={user.id}>
+                                        <td> {user.id}</td>
+                                        <td> {user.email}</td>
+                                    </tr>
+
+                            )
+                        };
+                </div>
             </div>
         </>
 
