@@ -22,7 +22,7 @@ public class UserController {
     public UserController(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
-    @GetMapping({"/", ""})
+    @GetMapping({"/Userall"})
     public List<Users> getUsers(){
         List<Users> users = new ArrayList<>();
         userRepository.findAll().forEach(users::add);
@@ -38,6 +38,12 @@ public class UserController {
     @GetMapping("/users")
     public Iterable<Users> getUser2(){
         return userRepository.findAll();
+    }
+
+    @PostMapping("/User/add")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Users addUser(@RequestBody  Users newUser){
+        return userRepository.save(newUser);
     }
 
 }

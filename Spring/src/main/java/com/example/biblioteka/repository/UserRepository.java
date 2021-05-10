@@ -8,6 +8,7 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends CrudRepository<Users, Long> {
     Users getUserByEmailAndPassword(String email, String password);
+    Optional<Users> getUserByEmail(String email);
 
     /*
      * getSaltByEmail method provides user salt necessary for logging in
@@ -19,5 +20,8 @@ public interface UserRepository extends CrudRepository<Users, Long> {
     Optional<String> getSaltByEmail(String email);
 
 
-    Optional<Users> getUserByEmail(String email);
+
+
+
+
 }

@@ -1,5 +1,7 @@
 package com.example.biblioteka.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.*;
@@ -21,8 +23,8 @@ public class UserDetails implements Serializable {
 
     private String phone;
     private String adres;
-
-    @OneToOne(mappedBy = "userDetails")
+    @JsonIgnore
+    @OneToOne(mappedBy = "userDetails",cascade = CascadeType.ALL)
     private Users user;
 
     public UserDetails(@NotEmpty String username, @NotEmpty String surname, String phone, String adres) {

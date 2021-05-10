@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd%22%3E">
+   <hibernate-configuration>
+    <session-factory>
+         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://ec2-54-216-185-51.eu-west-1.compute.amazonaws.com:5432/db2rf4aac3oh60>
+        <property name="hibernate.connection.username">mmswsshlusjkwy</property>
+        <property name="hibernate.connection.password">44678aaa8da9dcad8f3b862dc30c8651e8781029994564c6a5204af75f64b71f</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+
+
+        <mapping class="com.example.biblioteka.model.Books" />
+
+        <mapping class="com.example.biblioteka.model.Author" />
+        <mapping class="com.example.biblioteka.model.shop" />
+          <mapping class="com.example.biblioteka.model.Users" />
+          <mapping class="com.example.biblioteka.model.UserDetails" />
+        </session-factory>
+        </hibernate-configuration>

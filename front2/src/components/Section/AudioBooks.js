@@ -2,7 +2,7 @@
 import React,{Component} from 'react';
 import './Section.css';
 import Lista from "./lista/Lista";
-import Book from "./Book/Book";
+import BookA from "./Book/BookA";
 import PageFooter from "../PageFooter/PageFooter";
 export class AudioBooks extends Component{
     render() {
@@ -10,7 +10,7 @@ export class AudioBooks extends Component{
             <div className={"section"}>
                     <div className="Content">
                         <Lista/>
-                        <Book/>
+                        <BookA/>
 
                     </div>
             </div>

@@ -1,14 +1,14 @@
 
 import React,{Component} from 'react';
 import Lista from "./lista/Lista";
-import Book from "./Book/Book";
+import BookE from "./Book/BookE";
 export class Ebooks extends Component{
     render() {
         return (
             <div className={"section"}>
                 <div className="Content">
                     <Lista/>
-                    <Book/>
+                    <BookE/>
                 </div>
             </div>
 

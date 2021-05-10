@@ -14,9 +14,8 @@ import Comics from "./components/Section/Comics"
 import Help from "./components/Section/Help";
 import login from "./components/Section/login";
 import register from "./components/Section/register";
-const api = axios.create({
-    baseURL: `http://localhost:8080`
-})
+import homeLog from "./components/Section/HomeLog";
+
 class App extends React.Component{
 
     constructor(props){
@@ -56,6 +55,7 @@ class App extends React.Component{
                 <Navbar />
                 <Switch>
                     <Route path='/home' exact  component={home}/>
+                    <Route path='/homeLog' exact  component={homeLog}/>
                     <Route path='/Ebooks' component={Ebooks}/>
                     <Route path='/AudioBooks' component={AudioBooks}/>
                     <Route path='/ForRent' component={Ebooks}/>

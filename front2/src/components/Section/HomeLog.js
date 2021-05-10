@@ -2,7 +2,8 @@
 import React,{Component} from 'react';
 import axios from "axios";
 
-export class home extends Component{
+export class homeLog extends Component{
+
     componentDidMount() {
         const config={
             headers:{
@@ -18,8 +19,8 @@ export class home extends Component{
             }
         )
     }
-    render() {
 
+    render() {
         return (
             <div className={"section2"}>
                 <div className={"add"}>
@@ -37,4 +38,4 @@ export class home extends Component{
     }
 }
 
-export default home;
+export default homeLog;

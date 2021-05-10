@@ -12,10 +12,17 @@ class Book1 extends React.Component {
         this.state = {
             book: {
                 id:props.book.id,
-                title:props.book.title
+                title:props.book.title,
+                description:props.book.description,
+                price:props.book.price,
+                author:props.book.author
 
-            }
+            },
+
+
         }
+        console.log(this.state.book);
+
 
 
     }
@@ -38,14 +45,38 @@ class Book1 extends React.Component {
                                this.state.book.title
                            }
                        </div>
+                        <div>
+                            {
+                                this.state.book.author.name
+
+                            }
+
+                            {
+                                this.state.book.author.surname
+                            }
+
+                        </div>
+                        <div>
+                            {
+                                this.state.book.author.publishing_house
+                            }
+                        </div>
+                        <div>
+                            {
+                                this.state.book.description
+                            }
+                        </div>
+                        <div className={"shop"}>
+                            <i className="fa fa-cart-arrow-down"></i>
+                            {
+                                this.state.book.price
+                            }
+                        </div>
                     </div>
 
 
 
-                <div className={"shop"}>
-                    <i className="fa fa-cart-arrow-down"></i>
-                    22.0
-                </div>
+
             </div>
         );
     }
