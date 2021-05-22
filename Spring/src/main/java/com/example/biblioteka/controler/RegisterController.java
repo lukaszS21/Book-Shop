@@ -2,7 +2,7 @@ package com.example.biblioteka.controler;
 
 import com.example.biblioteka.model.Users;
 import com.example.biblioteka.repository.UserRepository;
-import com.example.biblioteka.services.JsonWebToken;
+import com.example.biblioteka.services.JsonToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.util.Pair;
 import org.springframework.http.HttpStatus;

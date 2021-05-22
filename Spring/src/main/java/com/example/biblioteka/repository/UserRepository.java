@@ -8,6 +8,7 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends CrudRepository<Users, Long> {
     Users getUserByEmailAndPassword(String email, String password);
+    
     Optional<Users> getUserByEmail(String email);
 
     /*
@@ -17,10 +18,7 @@ public interface UserRepository extends CrudRepository<Users, Long> {
      * @Returns salt as String
      * */
     @Query(value = "SELECT u.salt FROM users u WHERE u.email=?1", nativeQuery = true)
-    Optional<String> getSaltByEmail(String email);
-
-
-
+    String getSaltByEmail(String email);
 
 
 

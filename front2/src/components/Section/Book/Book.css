@@ -18,6 +18,8 @@
     width: 80%;
 }
 .content{
+    display: flex;
+    flex-direction: column;
     margin-left: 1em;
     width: 70%;
     padding: 0.2em;
@@ -53,4 +55,10 @@ i.fa.fa-sign-in{
 }
 i.fa.fa-user{
     font-size: xx-large;
+}
+.space2{
+    display: flex;
+}
+.space3{
+    margin-left: 1em;
 }

@@ -36,9 +36,9 @@ public class BooksController {
     }
     @GetMapping("/Books")
    public void addBook(){
-        Author author =new Author("janusz","sztynks","mamaBartkacompany");
+        Author author =new Author("janusz","ok","..");
         authorRepository.save(author);
-        Books books=new Books("1","1",1,1,"1","1",author);
+        Books books=new Books("1","1",1,1,"1","1","1",author);
 
         bookRepository.save(books);
 

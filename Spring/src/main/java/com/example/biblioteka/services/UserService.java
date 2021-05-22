@@ -5,6 +5,8 @@ import com.example.biblioteka.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class UserService {
     private final UserRepository userRepository;
@@ -21,5 +23,19 @@ public class UserService {
         newUser.setEmail("lukaszstolarz@op.pl");
         return newUser;
     }
-    public Users save(Users user){return save(user);}
+
+    public Optional<Users>findById(Long id){
+        return  userRepository.findById(id);
+    }
+    public Iterable<Users> findAll(){
+        return  userRepository.findAll();
+    }
+    public Users save(Users user){
+        return  userRepository.save(user);
+    }
+    public void deleteById(Long id){
+        userRepository.deleteById(id);
+    }
+
+
 }

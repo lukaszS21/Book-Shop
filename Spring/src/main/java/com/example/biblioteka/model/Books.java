@@ -31,6 +31,8 @@ public class Books {
 
     @Column
     private String type;
+    @Column
+    private String img;
 
 
 
@@ -44,17 +46,26 @@ public class Books {
 
     public Books() {
     }
-    public Books(String TITLE,  String DESCRIPTION,float PRICE,int QUANTITY,String category,String type,Author author) {
+    public Books(String TITLE,  String DESCRIPTION,float PRICE,int QUANTITY,String category,String type,String img,Author author) {
         this.TITLE= TITLE;
         this.DESCRIPTION = DESCRIPTION;
         this.PRICE = PRICE;
         this.QUANTITY = QUANTITY;
         this.category = category;
         this.type=type;
+        this.img=img;
         this.author=author;
+
         //this.id_BOOK = id_BOOK;
     }
 
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
 
     public String getType() {
         return type;

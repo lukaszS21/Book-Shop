@@ -1,44 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78bb7064-3816-4c5f-ae02-45605c35d6d6" name="Default Changelist" comment="login/Database/vievBooks">
-      <change afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/BooksController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/ComicsC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/CourseBookC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/EbooksC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+    <list default="true" id="78bb7064-3816-4c5f-ae02-45605c35d6d6" name="Default Changelist" comment="BooksAuthor/Login/Register">
       <change beforePath="$PROJECT_DIR$/../Spring/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/AudioBooksC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/AudioBooksC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/BooksController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/ComicsC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/CourseBookC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/EbooksC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/AudioBooksC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/AudioBooksC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/BooksController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/model/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/model/Books.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/model/UserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/model/UserDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/model/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/model/author.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/model/Author.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/repository/BookRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/services/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/services/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/services/JsonWebToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/services/JsonWebTokenProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Section/AudioBooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/AudioBooks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/Book.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/Book.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/Book.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/Book.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Section/Book/Book1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/Book1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/Comics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Comics.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/CurseBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/CurseBook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/Ebooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Ebooks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/ForRent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/ForRent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/BookA.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/BookA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/BookC.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/BookC.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/BookCo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/BookCo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/BookE.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/BookE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/BookF.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/BookF.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/img/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/1.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +66,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kokol\OneDrive\Pulpit\Zpai2\front2\public" />
       <recent name="C:\Users\kokol\OneDrive\Pulpit\Zpai2\front2\src\components\Section" />
       <recent name="C:\Users\kokol\OneDrive\Pulpit\Zpai2\front2\src\components\img" />
       <recent name="C:\Users\kokol\OneDrive\Pulpit\Zpai2\front2\src\components\Section\Book" />
@@ -138,7 +122,11 @@
       <workItem from="1620105572754" duration="2373000" />
       <workItem from="1620566042212" duration="7574000" />
       <workItem from="1620643648759" duration="2538000" />
-      <workItem from="1620652800726" duration="2602000" />
+      <workItem from="1620652800726" duration="2997000" />
+      <workItem from="1620710456071" duration="3326000" />
+      <workItem from="1621273494488" duration="1449000" />
+      <workItem from="1621315792407" duration="1103000" />
+      <workItem from="1621518411709" duration="2799000" />
     </task>
     <task id="LOCAL-00001" summary="React/improvement">
       <created>1618693294866</created>
@@ -168,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619952898826</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="BooksAuthor/Login/Register">
+      <created>1620660617584</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1620660617585</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +184,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="React/improvement" />
     <MESSAGE value="login/Database/vievBooks" />
-    <option name="LAST_COMMIT_MESSAGE" value="login/Database/vievBooks" />
+    <MESSAGE value="BooksAuthor/Login/Register" />
+    <option name="LAST_COMMIT_MESSAGE" value="BooksAuthor/Login/Register" />
   </component>
 </project>

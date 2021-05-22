@@ -1,7 +1,7 @@
 
 import React,{Component} from 'react';
 import './Book.css'
-import One from "../../img/1.jpg"
+import One from "../../../../public/img/1.jpg"
 import Book1 from "./Book1"
 import BookServices from "./BookServices";
 import axios from "axios";

@@ -5,10 +5,8 @@ import com.example.biblioteka.enums.UserRoles;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import java.io.Serializable;
 import java.sql.Date;
-import java.util.HashSet;
-import java.util.Set;
+
 @Entity
 @Table(name="Users")
 public class Users {
@@ -28,8 +26,7 @@ public class Users {
     private Boolean logged;
 
     @NotNull
-    @Enumerated(EnumType.STRING)
-    private UserRoles role;
+    private String role;
 
     @NotNull
     @Column(name = "created_at")
@@ -42,19 +39,15 @@ public class Users {
 
     }
 
-    public Users(String email, String password, UserDetails userDetails,String salt) {
+    public Users(String email, String password, UserDetails userDetails) {
 
         this.email = email;
         this.password = password;
         this.userDetails = userDetails;
-        this.salt=salt;
+
     }
-    @PrePersist
-    public void setUser() {
-        this.createdAt = new Date(System.currentTimeMillis());
-        this.logged = false;
-        this.role = UserRoles.ROLE_USER;
-    }
+
+
 
     public Long getId() {
         return id;
@@ -96,11 +89,11 @@ public class Users {
         this.logged = logged;
     }
 
-    public UserRoles getRole() {
+    public String getRole() {
         return role;
     }
 
-    public void setRole(UserRoles role) {
+    public void setRole(String role) {
         this.role = role;
     }
 

@@ -12,11 +12,7 @@ public interface BookRepository  extends CrudRepository<Books, Long> {
     Books getBooksByTITLE(String TITLE);
 
     List<Books> findByType(String type);
-
-
-
      Optional <Books>getBooksByType(String type);
-
 
 
 
