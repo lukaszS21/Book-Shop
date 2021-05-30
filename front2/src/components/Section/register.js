@@ -15,7 +15,7 @@ export class register extends Component{
             last_name:this.surname
         };
         console.log(user);
-        axios.post("register",user).then(
+        axios.post("home/registration",user).then(
             res=>{
                 console.log(res);
             }

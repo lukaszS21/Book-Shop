@@ -1,5 +1,6 @@
 package com.example.biblioteka.controler;
 
+import com.example.biblioteka.model.Basket;
 import com.example.biblioteka.model.UserDetails;
 import com.example.biblioteka.model.Users;
 import com.example.biblioteka.repository.UserRepository;
@@ -59,8 +60,9 @@ public class UserController {
     }
     @GetMapping("/add_admin")
     public void addUser() {
+        Basket basket=new Basket();
         UserDetails userDetails=new UserDetails("lukasz","Stolarz","508963620","tu");
-        Users user = new Users("lukasz@op.pl","1234", userDetails);
+        Users user = new Users("lukasz@op.pl","1234", userDetails,basket);
         String salt = BCrypt.gensalt();
         String hashedPassword = BCrypt.hashpw(user.getPassword(), salt);
         user.setPassword(hashedPassword);

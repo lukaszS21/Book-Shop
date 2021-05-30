@@ -34,20 +34,36 @@ public class Users {
     @OneToOne(cascade = CascadeType.ALL)
     @PrimaryKeyJoinColumn
     private UserDetails userDetails;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id")
+    private Basket basket;
     public Users(){
 
 
     }
 
-    public Users(String email, String password, UserDetails userDetails) {
+    public Users(String email, String password, UserDetails userDetails,Basket basket) {
 
         this.email = email;
         this.password = password;
         this.userDetails = userDetails;
+        this.basket = basket;
 
     }
+    @PrePersist
+    public void setUser() {
+        this.createdAt = new Date(System.currentTimeMillis());
+        this.logged = false;
+    }
 
+    public Basket getBasket() {
+        return basket;
+    }
 
+    public void setBasket(Basket basket) {
+        this.basket = basket;
+    }
 
     public Long getId() {
         return id;

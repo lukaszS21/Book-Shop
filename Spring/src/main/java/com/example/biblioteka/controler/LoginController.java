@@ -46,10 +46,34 @@ public class LoginController {
 
         if(loginUser==null)
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        loginUser.setLogged(true);
+        userRepository.save(loginUser);
 
-        Pair<Long, String> userIdWithTokenPair = Pair.of(loginUser.getId(), jsonToken.generateToken(loginUser));
+        Pair<Long, String>  userIdWithTokenPair = Pair.of(loginUser.getId(), jsonToken.generateToken(loginUser));
         return new ResponseEntity<>(userIdWithTokenPair, HttpStatus.OK);
 
+    }
+    @PostMapping(value = "/login2")
+    public ResponseEntity<?> loginUser(@RequestParam("email") String email, @RequestParam("password") String password) {
+
+        Optional<String> salt = userRepository.getSaltByEmail2(email);
+        if(salt.isPresent()) {
+
+            Users loggedUser = userRepository.getUserByEmailAndPassword(
+                    email,
+                    BCrypt.hashpw(password, salt.get())
+            );
+
+            if(loggedUser == null)
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
+            loggedUser.setLogged(true);
+            userRepository.save(loggedUser);
+
+            Pair<Long, String> userIdWithTokenPair = Pair.of(loggedUser.getId(), jsonToken.generateToken(loggedUser));
+            return new ResponseEntity<>(userIdWithTokenPair, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
     @PostMapping(value = "/registration")
     public void registration(@RequestBody Users users){
@@ -58,8 +82,21 @@ public class LoginController {
         String hashedPassword = BCrypt.hashpw(users.getPassword(), salt);
         users.setPassword(hashedPassword);
         users.setSalt(salt);
+        users.getCreatedAt();
         users.setRole("USER");
         userRepository.save(users);
     }
 
-}
+        @PutMapping(value = "/logout")
+        public ResponseEntity<?> logoutUser(@RequestParam("userId")Long id) {
+            Optional<Users> loggedUser = userRepository.findById(id);
+            if(loggedUser.isPresent()) {
+                loggedUser.get().setLogged(false);
+                userRepository.save(loggedUser.get());
+                return new ResponseEntity<>(HttpStatus.OK);
+            }
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+

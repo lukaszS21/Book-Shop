@@ -73,6 +73,7 @@ class Book1 extends React.Component {
                             }
                         </div>
                         <div className={"shop"}>
+                            <button>Add</button>
                             <i className="fa fa-cart-arrow-down"></i>
                             {
                                 this.state.book.price

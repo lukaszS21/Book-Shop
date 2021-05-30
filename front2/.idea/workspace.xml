@@ -2,26 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78bb7064-3816-4c5f-ae02-45605c35d6d6" name="Default Changelist" comment="BooksAuthor/Login/Register">
-      <change beforePath="$PROJECT_DIR$/../Spring/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/AudioBooksC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/AudioBooksC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/BooksController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/model/Basket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/RegisterController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/model/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/model/Books.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/repository/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/model/Users.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/services/JsonWebToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/services/JsonWebTokenProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/AudioBooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/AudioBooks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/Book.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/Book.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/Book.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/Book.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Section/Book/Book1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/Book1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/BookA.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/BookA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/BookC.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/BookC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/BookCo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/BookCo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/BookE.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/BookE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/BookF.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/BookF.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/img/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/register.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +117,10 @@
       <workItem from="1621273494488" duration="1449000" />
       <workItem from="1621315792407" duration="1103000" />
       <workItem from="1621518411709" duration="2799000" />
+      <workItem from="1621681927363" duration="2017000" />
+      <workItem from="1621767037448" duration="1130000" />
+      <workItem from="1621920686545" duration="637000" />
+      <workItem from="1622405155989" duration="650000" />
     </task>
     <task id="LOCAL-00001" summary="React/improvement">
       <created>1618693294866</created>
