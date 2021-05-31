@@ -24,7 +24,7 @@ export class BookA extends Component{
     loadBooks()
     {
 
-        const result=axios.get("http://localhost:8080/Audio");
+        const result=axios.get("http://localhost:8080/book/Audio");
         return result;
 
 

@@ -1,4 +1,5 @@
 package com.example.biblioteka.controler;
+import com.example.biblioteka.model.Basket;
 import com.example.biblioteka.model.Users;
 import com.example.biblioteka.repository.UserRepository;
 import com.example.biblioteka.services.JsonToken;
@@ -31,7 +32,7 @@ public class LoginController {
         String salt = userRepository.getSaltByEmail(details.getEmail());
 
         if(salt==null){
-            return null;
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
         Users loginUser = userRepository.getUserByEmailAndPassword(
@@ -53,28 +54,7 @@ public class LoginController {
         return new ResponseEntity<>(userIdWithTokenPair, HttpStatus.OK);
 
     }
-    @PostMapping(value = "/login2")
-    public ResponseEntity<?> loginUser(@RequestParam("email") String email, @RequestParam("password") String password) {
 
-        Optional<String> salt = userRepository.getSaltByEmail2(email);
-        if(salt.isPresent()) {
-
-            Users loggedUser = userRepository.getUserByEmailAndPassword(
-                    email,
-                    BCrypt.hashpw(password, salt.get())
-            );
-
-            if(loggedUser == null)
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-
-            loggedUser.setLogged(true);
-            userRepository.save(loggedUser);
-
-            Pair<Long, String> userIdWithTokenPair = Pair.of(loggedUser.getId(), jsonToken.generateToken(loggedUser));
-            return new ResponseEntity<>(userIdWithTokenPair, HttpStatus.OK);
-        }
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-    }
     @PostMapping(value = "/registration")
     public void registration(@RequestBody Users users){
 
@@ -82,8 +62,11 @@ public class LoginController {
         String hashedPassword = BCrypt.hashpw(users.getPassword(), salt);
         users.setPassword(hashedPassword);
         users.setSalt(salt);
-        users.getCreatedAt();
         users.setRole("USER");
+        users.setUser();
+        System.out.println(users);
+        Basket basket=new Basket();
+        users.setBasket(basket);
         userRepository.save(users);
     }
 
@@ -93,6 +76,7 @@ public class LoginController {
             if(loggedUser.isPresent()) {
                 loggedUser.get().setLogged(false);
                 userRepository.save(loggedUser.get());
+
                 return new ResponseEntity<>(HttpStatus.OK);
             }
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

@@ -3,6 +3,7 @@ import React,{Component} from 'react';
 import './register.css'
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import axios from "axios";
+import {Link} from "react-router-dom";
 export class register extends Component{
     handleSubmit=event=>{
         event.preventDefault()
@@ -11,8 +12,11 @@ export class register extends Component{
             email:this.email,
             password:this.password,
             password_confirm:this.confirmPassword,
-            first_name:this.name,
-            last_name:this.surname
+            userDetails:{
+                username:this.name,
+                surname:this.surname
+            }
+
         };
         console.log(user);
         axios.post("home/registration",user).then(
@@ -57,7 +61,10 @@ export class register extends Component{
                             <input type="text" className="form-control" placeholder="Last Name"
                                    onChange={event => this.surname=event.target.value}/>
                         </div>
-                    <button className="btn btn-danger btn-lg ">Sing UP</button>
+
+
+                        <button className="btn btn-danger btn-lg ">Sing UP</button>
+
 
                 </form>
 

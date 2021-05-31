@@ -1,32 +1,30 @@
 
-import React,{Component} from 'react';
+import React, {useState} from 'react';
 import './login.css'
 import {Link} from "react-router-dom";
-import axios from "axios";
-export class login extends Component{
-    handleSubmit= event=> {
-        event.preventDefault();
 
-        const user = {
-            email: this.email,
-            password: this.password
+
+import { signin } from '../Autorisation/LoginAuth';
+import {useDispatch, useSelector} from "react-redux";
+
+export default function Login() {
+    const [user,setUser]=useState({email:"", password:""});
+    const dispatch = useDispatch();
+    const auth = useSelector(state => state.auth);
+    const handleSubmit = e => {
+
+        e.preventDefault();
+        dispatch(signin(user));
+        if(!auth.register_error){
+            console.log("Wrong email or password!")
         }
-        axios.post("home/login",user).then(
-            res=>{
-                localStorage.setItem('token',res.data.token);
-            }
-        ).catch(
-            err=>{
-                console.log(err);
-            }
-        )
-
-    };
 
 
-    render() {
+    }
+
         return (
-            <form onSubmit={this.handleSubmit} className="Back">
+
+            <form onSubmit={handleSubmit} className="Back">
                 <div className="Login">
 
                     <div className="Login2">
@@ -43,12 +41,12 @@ export class login extends Component{
                 <div className={"form-group"}>
                     <label>Email</label>
                     <input type="email" className="form-control" placeholder="Email"
-                           onChange={event => this.email = event.target.value}/>
+                           onChange={event => user.email = event.target.value}/>
                 </div>
                 <div className={"form-group"}>
                     <label>Password</label>
                     <input className="form-control" type="password" id="inputPassword2" placeholder="Password"
-                           onChange={event => this.password = event.target.value}/>
+                           onChange={event => user.password = event.target.value}/>
                 </div>
 
                 <button className="btn btn-danger btn-lg ">Login</button>
@@ -56,10 +54,8 @@ export class login extends Component{
             </form>
 
 
-
-
         );
     }
-}
 
-export default login;
+
+

@@ -16,7 +16,8 @@ public class JsonToken {
     public String generateToken(Users users) {
 
         Key signingKey = new SecretKeySpec(KeyRepository.getSigningKey().getBytes(StandardCharsets.UTF_8), SignatureAlgorithm.HS512.getJcaName());
-        String name = users.getUserDetails().getUsername();
+        String name = users.getUserDetails().getUsername()+users.getUserDetails().getSurname();
+
 
         return Jwts.builder()
                 .setSubject(users.getEmail())

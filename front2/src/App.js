@@ -15,32 +15,10 @@ import Help from "./components/Section/Help";
 import login from "./components/Section/login";
 import register from "./components/Section/register";
 import homeLog from "./components/Section/HomeLog";
+import Admin from "./components/Section/Admin/Admin"
 
 class App extends React.Component{
 
-    constructor(props){
-        super(props);
-        this.state = {
-            users: []
-        }
-
-    }
-    componentDidMount() {
-        axios.get("http://localhost:8080/users").then((response)=>{
-            this.setState({users:response.data})
-            console.log(this.state.users);
-        });
-        // api.get('/users').then(response => response.data)
-        //     .then((data) => {
-        //         //console.log(this.state.users);
-        //         this.setState({users: data})
-        //         console.log(this.state.users);
-        //     })
-        // console.log(this.state.users);
-        // //console.log(this.state.users);
-
-
-    }
 
 
     render() {
@@ -64,27 +42,12 @@ class App extends React.Component{
                     <Route path='/Login' component={login}/>
                     <Route path='/Help' component={Help}/>
                     <Route path='/register' component={register}/>
+                    <Route path='/admin' component={Admin}/>
 
                 </Switch>
                 <PageFooter/>
             </BrowserRouter>
-            <div>
 
-                <div>
-
-                        {
-
-                            this.state.users.map(
-                                user =>
-                                    <tr key ={user.id}>
-                                        <td> {user.id}</td>
-                                        <td> {user.email}</td>
-                                    </tr>
-
-                            )
-                        };
-                </div>
-            </div>
         </>
 
       );

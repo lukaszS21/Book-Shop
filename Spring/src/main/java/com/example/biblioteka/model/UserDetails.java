@@ -23,6 +23,7 @@ public class UserDetails implements Serializable {
 
     private String phone;
     private String adres;
+
     @JsonIgnore
     @OneToOne(mappedBy = "userDetails",cascade = CascadeType.ALL)
     private Users user;

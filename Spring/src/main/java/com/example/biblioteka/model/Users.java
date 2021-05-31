@@ -1,6 +1,8 @@
 package com.example.biblioteka.model;
 
 import com.example.biblioteka.enums.UserRoles;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -28,12 +30,14 @@ public class Users {
     @NotNull
     private String role;
 
-    @NotNull
+
     @Column(name = "created_at")
     private Date createdAt;
+
     @OneToOne(cascade = CascadeType.ALL)
     @PrimaryKeyJoinColumn
     private UserDetails userDetails;
+
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id")
@@ -127,5 +131,20 @@ public class Users {
 
     public void setUserDetails(UserDetails userDetails) {
         this.userDetails = userDetails;
+    }
+
+    @Override
+    public String toString() {
+        return "Users{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", salt='" + salt + '\'' +
+                ", password='" + password + '\'' +
+                ", logged=" + logged +
+                ", role='" + role + '\'' +
+                ", createdAt=" + createdAt +
+                ", userDetails=" + userDetails +
+                ", basket=" + basket +
+                '}';
     }
 }
