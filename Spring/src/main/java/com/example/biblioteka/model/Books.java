@@ -125,4 +125,19 @@ public class Books {
     public Author getAuthor() {
         return author;
     }
+
+    @Override
+    public String toString() {
+        return "Books{" +
+                "id_BOOK=" + id_BOOK +
+                ", TITLE='" + TITLE + '\'' +
+                ", category='" + category + '\'' +
+                ", PRICE=" + PRICE +
+                ", QUANTITY=" + QUANTITY +
+                ", type='" + type + '\'' +
+                ", img='" + img + '\'' +
+                ", author=" + author +
+                ", DESCRIPTION='" + DESCRIPTION + '\'' +
+                '}';
+    }
 }
