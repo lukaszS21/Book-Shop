@@ -9,6 +9,12 @@ import {useHistory} from "react-router";
 import {signout} from "../Autorisation/LoginAuth";
 import jwt_decode from "jwt-decode";
 function Navbar () {
+    const [clicked, setClicked] = useState(false);
+
+    const handleClick = () =>setClicked(!clicked);
+
+
+    const changeClicked = () => setClicked(!clicked);
     const auth = useSelector(state => state.auth)
     const dispatch = useDispatch();
     const history = useHistory();
@@ -28,38 +34,36 @@ function Navbar () {
 
         return (
 
-
-
             <nav className="NavbarItems">
-
                 <header className="App-header">
-                    <ul className={"li2"}>
 
+                    {/*<ul className={clicked ? "nav-menu-active:":"li2"}>*/}
+                    <ul className="li2">
                         {decode.role==="ADMIN"?(
-                            <div className={"nav"}>
+                            <li className={"nav"}>
                                 <i className="fa fa-user"></i>
-                                <Link className='a' to='/admin'>
+                                <Link className='a' to='/admin' onClick={handleClick}>
                                     adminPanel
                                 </Link>
-                            </div>
+                            </li>
                         ):null}
 
-                       <div className={"nav"}>
+                       <li className={"nav"}>
                            <i className="fa fa-question-circle" styleName={"icon"}></i>
-                           <Link className='a' to='/Help'>
+                           <Link className='a' to='/Help' onClick={handleClick}>
                                Help
                            </Link>
-                       </div>
+                       </li>
 
 
                         {(auth.login) ? (
 
-                            <div className={"nav"}>
+                            <li className={"nav"}>
                                 <i className="fa fa-user"></i>
-                                <Link className='a' to='/myAcount'>
+                                <Link className='a' to='/myAcount' onClick={handleClick}>
                                     {decode.name}
                                 </Link>
-                            </div>
+                            </li>
 
                         ) : (
                             null
@@ -68,24 +72,25 @@ function Navbar () {
 
                         {(auth.login) ? (
 
-                            <div className={"nav"}>
+                            <li className={"nav"}>
                                 <i className="fa fa-user"></i>
-                                <Link className='a' to='/home'>
+                                <Link className='a' to='/home' onClick={handleClick}>
                                     logout
                                 </Link>
-                            </div>
+                            </li>
 
                         ) : (
-                            <div className={"nav"}>
+                            <li className={"nav"}>
                                 <i className={"fa fa-sign-in"}  ></i>
-                                <Link className='a' to='/login'>
+                                <Link className='a' to='/login' onClick={handleClick}>
                                     Login/Register
                                 </Link>
-                            </div>
+                            </li>
 
                         )}
 
                     </ul>
+                    <div className="nav-icon" onClick={handleClick}></div>
                 </header>
                     <div className="Search">
 

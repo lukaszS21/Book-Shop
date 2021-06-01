@@ -26,7 +26,7 @@ class App extends React.Component{
       return (
         <>
             <BrowserRouter>
-
+                <div className={"page"}>
                 <Route exact path={'/'}>
                     <Redirect to={'/home'}/>
                 </Route>
@@ -46,6 +46,7 @@ class App extends React.Component{
 
                 </Switch>
                 <PageFooter/>
+                </div>
             </BrowserRouter>
 
         </>

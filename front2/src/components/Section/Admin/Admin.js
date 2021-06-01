@@ -70,7 +70,7 @@ export class Admin extends Component{
                 </div>
                 <div className={"form-group"}>
                     <label>Img</label>
-                    <input type="text" className="form-control" placeholder="img"
+                    <input type="text" className="form-control" placeholder="./img/1.jpg"
                            onChange={event => this.img=event.target.value}/>
                 </div>
                 {/*<div className={"form-group"}>*/}

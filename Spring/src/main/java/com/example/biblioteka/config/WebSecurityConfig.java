@@ -24,12 +24,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         UsernamePasswordAuthenticationFilter.class
                 )
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET, "*").permitAll()
-                .antMatchers(HttpMethod.POST, "*").permitAll();
-//                .antMatchers(HttpMethod.POST, "/home/login").permitAll()
-//                .antMatchers(HttpMethod.POST, "/home/registration").permitAll()
-//                .antMatchers(HttpMethod.POST, "/book/AddBook").permitAll()
-//                .antMatchers( "/book/**").permitAll().anyRequest().authenticated();
+//                .antMatchers(HttpMethod.GET, "*").permitAll()
+//                .antMatchers(HttpMethod.POST, "*").permitAll();
+                .antMatchers(HttpMethod.POST, "/home/login").permitAll()
+               .antMatchers(HttpMethod.POST, "/home/registration").permitAll()
+              .antMatchers(HttpMethod.POST, "/book/AddBook").permitAll()
+               .antMatchers( "/book/**").permitAll().anyRequest().authenticated();
 
     }
 }

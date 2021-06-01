@@ -23,7 +23,7 @@ export class BookE extends Component{
     loadBooks()
     {
 
-        const result=axios.get("http://localhost:8080/Ebooks");
+        const result=axios.get("http://localhost:8080/book/Ebooks");
         return result;
 
 

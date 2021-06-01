@@ -13,6 +13,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
+@RequestMapping("book")
 public class ComicsC {
     private BookService books;
     private final BookRepository bookRepository;
