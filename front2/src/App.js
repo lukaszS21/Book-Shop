@@ -16,7 +16,8 @@ import login from "./components/Section/login";
 import register from "./components/Section/register";
 import homeLog from "./components/Section/HomeLog";
 import Admin from "./components/Section/Admin/Admin"
-
+import myAcount from "./components/User/myAcount";
+import AccountSettings from "./components/User/myAcount";
 class App extends React.Component{
 
 
@@ -43,6 +44,7 @@ class App extends React.Component{
                     <Route path='/Help' component={Help}/>
                     <Route path='/register' component={register}/>
                     <Route path='/admin' component={Admin}/>
+                    <Route path='/myAcount' component={ AccountSettings}/>
 
                 </Switch>
                 <PageFooter/>

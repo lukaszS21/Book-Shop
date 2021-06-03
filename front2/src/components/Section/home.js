@@ -1,6 +1,7 @@
 
 import React,{Component} from 'react';
 import axios from "axios";
+import Add from "../RabitMq/Add"
 
 export class home extends Component{
     componentDidMount() {
@@ -23,7 +24,9 @@ export class home extends Component{
         return (
             <div className={"section2"}>
                 <div className={"add"}>
-                    <word>Reklama ksiazek</word>
+                    <word>
+                       <Add/>
+                    </word>
                 </div>
                 <div className={"rec"}>
                     Polecane

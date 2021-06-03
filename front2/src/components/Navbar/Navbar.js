@@ -19,18 +19,29 @@ function Navbar () {
     const dispatch = useDispatch();
     const history = useHistory();
     const handleLogout = () => {
+
+
         dispatch(signout()).then(() => {
-            history.push("/");
-        });
+            history.replace('/');
+            setStatus(false);
+            setInfo({role: "NULL", name: "NULL"});
+        })
+        if(localStorage.getItem("token") === null){
+            setClicked(false);
+        }
     }
     const [decode,setDecode]=useState({role: "NULL", name:"NULL"});
+    const [info, setInfo] = useState({role: "NULL", name: "NULL"})
+    const [status, setStatus] = useState(false);
     useEffect(() => {
-    if (auth.login) {
-    const token= auth.auth.second;
-    setDecode(jwt_decode(token)) ;
-
-}
-}, [auth.login]);
+        if (localStorage.getItem("token") !== null) {
+            const token= localStorage.getItem("token");
+            setInfo(jwt_decode(token)) ;
+            setStatus(true);
+            console.log(info);
+        }
+        console.log(info);
+    }, [status, auth.login]);
 
         return (
 
@@ -61,7 +72,7 @@ function Navbar () {
                             <li className={"nav"}>
                                 <i className="fa fa-user"></i>
                                 <Link className='a' to='/myAcount' onClick={handleClick}>
-                                    {decode.name}
+                                    YourAcount
                                 </Link>
                             </li>
 
@@ -74,7 +85,7 @@ function Navbar () {
 
                             <li className={"nav"}>
                                 <i className="fa fa-user"></i>
-                                <Link className='a' to='/home' onClick={handleClick}>
+                                <Link className='a' to='/home' onClick={handleLogout}>
                                     logout
                                 </Link>
                             </li>

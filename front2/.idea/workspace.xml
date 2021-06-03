@@ -2,20 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78bb7064-3816-4c5f-ae02-45605c35d6d6" name="Default Changelist" comment="BooksAuthor/Login/Register">
+      <change afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/RabitMq/publisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/ComicsC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/ComicsC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/CourseBookC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/CourseBookC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/EbooksC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/EbooksC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/ForRentC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/ForRentC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/Admin/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Admin/Admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/BookCo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/BookCo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/BookE.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/BookE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/BookF.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/BookF.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/BookServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/BookServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/Book1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/Book1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,15 +23,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="Login_Basket" />
+        <entry key="$PROJECT_DIR$/.." value="Improves" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -56,6 +54,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -128,6 +127,9 @@
       <workItem from="1622405155989" duration="1342000" />
       <workItem from="1622454606408" duration="22951000" />
       <workItem from="1622495435978" duration="4348000" />
+      <workItem from="1622525254724" duration="2497000" />
+      <workItem from="1622565466743" duration="8225000" />
+      <workItem from="1622718724250" duration="6523000" />
     </task>
     <task id="LOCAL-00001" summary="React/improvement">
       <created>1618693294866</created>
@@ -208,5 +210,9 @@
     <MESSAGE value="login/Database/vievBooks" />
     <MESSAGE value="BooksAuthor/Login/Register" />
     <option name="LAST_COMMIT_MESSAGE" value="BooksAuthor/Login/Register" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
