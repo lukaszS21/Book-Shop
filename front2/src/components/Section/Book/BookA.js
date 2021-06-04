@@ -39,7 +39,7 @@ export class BookA extends Component{
                     {
                         this.state.books.map(
                             book=>
-                                <Book1 book={book}/>
+                                <Book1 book={book}  key={book.id}/>
                         )
                     }
 

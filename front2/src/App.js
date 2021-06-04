@@ -18,6 +18,7 @@ import homeLog from "./components/Section/HomeLog";
 import Admin from "./components/Section/Admin/Admin"
 import myAcount from "./components/Section/User/myAcount";
 import AccountSettings from "./components/Section/User/myAcount";
+import Cart from "./components/Section/Basket/Cart";
 class App extends React.Component{
 
 
@@ -45,6 +46,7 @@ class App extends React.Component{
                     <Route path='/register' component={register}/>
                     <Route path='/admin' component={Admin}/>
                     <Route path='/myAcount' component={ AccountSettings}/>
+                    <Route path='/Cart' component={ Cart}/>
 
                 </Switch>
                 <PageFooter/>

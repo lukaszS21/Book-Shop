@@ -25,7 +25,7 @@ export class home extends Component{
             <div className={"section2"}>
                 <div className={"add"}>
                     <word>
-                       <Add/>
+                       {/*<Add/>*/}
                     </word>
                 </div>
                 <div className={"rec"}>
