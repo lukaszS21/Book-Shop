@@ -1,40 +1,107 @@
-import React,{Component} from 'react';
+import React, {Component, useEffect, useState} from 'react';
 
 import './Navbar.css'
 
 import logo3 from "../../logo3.png";
 import {Link} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+import {useHistory} from "react-router";
+import {signout} from "../Autorisation/LoginAuth";
+import jwt_decode from "jwt-decode";
+function Navbar () {
+    const [clicked, setClicked] = useState(false);
 
-class Navbar extends Component {
-    render() {
+    const handleClick = () =>setClicked(!clicked);
+
+
+    const changeClicked = () => setClicked(!clicked);
+    const auth = useSelector(state => state.auth)
+    const dispatch = useDispatch();
+    const history = useHistory();
+    const handleLogout = () => {
+
+
+        dispatch(signout()).then(() => {
+            history.replace('/');
+            setStatus(false);
+            setInfo({role: "NULL", name: "NULL"});
+        })
+        if(localStorage.getItem("token") === null){
+            setClicked(false);
+        }
+    }
+    const [decode,setDecode]=useState({role: "NULL", name:"NULL"});
+    const [info, setInfo] = useState({role: "NULL", name: "NULL"})
+    const [status, setStatus] = useState(false);
+    useEffect(() => {
+        if (localStorage.getItem("token") !== null) {
+            const token= localStorage.getItem("token");
+            setInfo(jwt_decode(token)) ;
+            setStatus(true);
+            console.log(info);
+        }
+        console.log(info);
+    }, [status, auth.login]);
+
         return (
 
-
-
             <nav className="NavbarItems">
-
                 <header className="App-header">
-                    <ul className={"li2"}>
-                        <div className={"nav"}>
-                            <i className="fa fa-user"></i>
-                            <Link className='a' to='/login'>
-                                MyAcount
-                            </Link>
-                        </div>
-                       <div className={"nav"}>
+
+                    {/*<ul className={clicked ? "nav-menu-active:":"li2"}>*/}
+                    <ul className="li2">
+                        {decode.role==="ADMIN"?(
+                            <li className={"nav"}>
+                                <i className="fa fa-user"></i>
+                                <Link className='a' to='/admin' onClick={handleClick}>
+                                    adminPanel
+                                </Link>
+                            </li>
+                        ):null}
+
+                       <li className={"nav"}>
                            <i className="fa fa-question-circle" styleName={"icon"}></i>
-                           <Link className='a' to='/Help'>
+                           <Link className='a' to='/Help' onClick={handleClick}>
                                Help
                            </Link>
-                       </div>
-                        <div className={"nav"}>
-                            <i className={"fa fa-sign-in"}  ></i>
-                            <Link className='a' to='/login'>
-                                Login/Register
-                            </Link>
-                        </div>
+                       </li>
+
+
+                        {(auth.login) ? (
+
+                            <li className={"nav"}>
+                                <i className="fa fa-user"></i>
+                                <Link className='a' to='/myAcount' onClick={handleClick}>
+                                    YourAcount
+                                </Link>
+                            </li>
+
+                        ) : (
+                            null
+
+                        )}
+
+                        {(auth.login) ? (
+
+                            <li className={"nav"}>
+                                <i className="fa fa-user"></i>
+                                <Link className='a' to='/home' onClick={handleLogout}>
+                                    logout
+                                </Link>
+                            </li>
+
+                        ) : (
+                            <li className={"nav"}>
+                                <i className={"fa fa-sign-in"}  ></i>
+                                <Link className='a' to='/login' onClick={handleClick}>
+                                    Login/Register
+                                </Link>
+                            </li>
+
+                        )}
 
                     </ul>
+                    <div className="nav-icon" onClick={handleClick}></div>
                 </header>
                     <div className="Search">
 
@@ -89,5 +156,5 @@ class Navbar extends Component {
 
         )
     }
-}
+
 export default Navbar

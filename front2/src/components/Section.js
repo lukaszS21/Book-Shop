@@ -1,13 +1,13 @@
 
 import React,{Component} from 'react';
 import home from "./Section/home";
-import AudioBooks from "./Section/AudioBooks";
-import Ebooks from "./Section/Ebooks";
-import ForRent from "./Section/ForRent";
-import Comics from "./Section/Comics";
-import CurseBook from "./Section/CurseBook";
-import login from "./Section/login";
-import register from "./Section/register";
+import AudioBooks from "./Section/Book_List/AudioBooks";
+import Ebooks from "./Section/Book_List/Ebooks";
+import ForRent from "./Section/Book_List/ForRent";
+import Comics from "./Section/Book_List/Comics";
+import CurseBook from "./Section/Book_List/CurseBook";
+import login from "./Section/User/login";
+import register from "./Section/User/register";
 import Help from "./Section/Help";
 import {Route} from 'react-router-dom'
 import './Section/home.css'

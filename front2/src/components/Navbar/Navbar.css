@@ -123,3 +123,21 @@ img{
     display: flex;
 
 }
+.nav-icon{
+    display: none;
+}
+@media screen and (max-width: 960px) {
+    .li2{
+        display: flex;
+        flex-direction:column ;
+        width: 100%;
+    }
+    .nav-menu .active{
+        background-color: #CD8d8b;
+        left: 0px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+
+}

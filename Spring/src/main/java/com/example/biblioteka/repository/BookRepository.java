@@ -4,10 +4,16 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+import java.util.Optional;
+
 @Repository
 public interface BookRepository  extends CrudRepository<Books, Long> {
     Books getBooksByTITLE(String TITLE);
-    @Query(value = "SELECT b.id_BOOK FROM book b WHERE TITLE=b.TITLE;", nativeQuery = true)
-    String getTITLE(String TITLE);
+
+    List<Books> findByType(String type);
+     Optional <Books>getBooksByType(String type);
+
+
 
 }

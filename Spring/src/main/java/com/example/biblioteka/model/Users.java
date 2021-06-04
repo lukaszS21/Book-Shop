@@ -1,14 +1,14 @@
 package com.example.biblioteka.model;
 
 import com.example.biblioteka.enums.UserRoles;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import java.io.Serializable;
 import java.sql.Date;
-import java.util.HashSet;
-import java.util.Set;
+
 @Entity
 @Table(name="Users")
 public class Users {
@@ -28,32 +28,45 @@ public class Users {
     private Boolean logged;
 
     @NotNull
-    @Enumerated(EnumType.STRING)
-    private UserRoles role;
+    private String role;
 
-    @NotNull
+
     @Column(name = "created_at")
     private Date createdAt;
+
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_details_id", referencedColumnName = "id")
+    @PrimaryKeyJoinColumn
     private UserDetails userDetails;
+
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "basket_id")
+    private Basket basket;
     public Users(){
 
 
     }
 
-    public Users(String email, String password, UserDetails userDetails,String salt) {
+    public Users(String email, String password, UserDetails userDetails,Basket basket) {
 
         this.email = email;
         this.password = password;
         this.userDetails = userDetails;
-        this.salt=salt;
+        this.basket = basket;
+
     }
     @PrePersist
     public void setUser() {
         this.createdAt = new Date(System.currentTimeMillis());
         this.logged = false;
-        this.role = UserRoles.ROLE_USER;
+    }
+
+    public Basket getBasket() {
+        return basket;
+    }
+
+    public void setBasket(Basket basket) {
+        this.basket = basket;
     }
 
     public Long getId() {
@@ -96,11 +109,11 @@ public class Users {
         this.logged = logged;
     }
 
-    public UserRoles getRole() {
+    public String getRole() {
         return role;
     }
 
-    public void setRole(UserRoles role) {
+    public void setRole(String role) {
         this.role = role;
     }
 
@@ -118,5 +131,20 @@ public class Users {
 
     public void setUserDetails(UserDetails userDetails) {
         this.userDetails = userDetails;
+    }
+
+    @Override
+    public String toString() {
+        return "Users{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", salt='" + salt + '\'' +
+                ", password='" + password + '\'' +
+                ", logged=" + logged +
+                ", role='" + role + '\'' +
+                ", createdAt=" + createdAt +
+                ", userDetails=" + userDetails +
+                ", basket=" + basket +
+                '}';
     }
 }

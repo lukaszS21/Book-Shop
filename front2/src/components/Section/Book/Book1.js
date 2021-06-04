@@ -1,7 +1,8 @@
-import One from "../../img/1.jpg";
+
 import React, {Component, useEffect,useState} from "react";
 import './Book.css'
 import axios from "axios";
+
 
 
 class Book1 extends React.Component {
@@ -12,13 +13,23 @@ class Book1 extends React.Component {
         this.state = {
             book: {
                 id:props.book.id,
-                title:props.book.title
+                title:props.book.title,
+                description:props.book.description,
+                price:props.book.price,
+                img:props.book.img,
+                author:props.book.author
 
-            }
+            },
+
+
         }
+        console.log(this.state.book);
+
 
 
     }
+
+
 
 
     render()
@@ -28,7 +39,8 @@ class Book1 extends React.Component {
             <div className="Books">
 
                 <div className={"image"}>
-                    <img className={"ImgBook"} src={One} alt={""}/>
+                    <img className={"ImgBook"} src={this.state.book.img} />
+
 
                 </div>
 
@@ -38,14 +50,43 @@ class Book1 extends React.Component {
                                this.state.book.title
                            }
                        </div>
+                        <div className={"space2"}>
+                            {
+                                this.state.book.author.name
+
+                            }
+                            <div className={"space3"}>
+                                {
+                                    this.state.book.author.surname
+                                }
+                            </div>
+
+
+
+                        </div>
+                        <div>
+
+                            {
+                                this.state.book.author.publishing_house
+                            }
+                        </div>
+                        <div>
+                            {
+                                this.state.book.description
+                            }
+                        </div>
+                        <div className={"shop"}>
+                            <button>Add</button>
+                            <i className="fa fa-cart-arrow-down"></i>
+                            {
+                                this.state.book.price
+                            }
+                        </div>
                     </div>
 
 
 
-                <div className={"shop"}>
-                    <i className="fa fa-cart-arrow-down"></i>
-                    22.0
-                </div>
+
             </div>
         );
     }

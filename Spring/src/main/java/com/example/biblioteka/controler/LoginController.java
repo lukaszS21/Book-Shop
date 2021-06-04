@@ -1,7 +1,8 @@
 package com.example.biblioteka.controler;
+import com.example.biblioteka.model.Basket;
 import com.example.biblioteka.model.Users;
 import com.example.biblioteka.repository.UserRepository;
-import com.example.biblioteka.services.JsonWebToken;
+import com.example.biblioteka.services.JsonToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.util.Pair;
 import org.springframework.http.HttpStatus;
@@ -16,34 +17,70 @@ import java.util.Optional;
 @RestController
 @RequestMapping(value = "/home")
 public class LoginController {
-    private final UserRepository repository;
-    private final JsonWebToken webTokenProvider;
+    private final UserRepository userRepository;
+    private final JsonToken jsonToken;
 
     @Autowired
-    public LoginController(UserRepository repository, JsonWebToken webTokenProvider) {
-        this.repository = repository;
-        this.webTokenProvider = webTokenProvider;
+    public LoginController(UserRepository userRepository, JsonToken jsonToken) {
+        this.userRepository = userRepository;
+        this.jsonToken = jsonToken;
     }
     @PostMapping(value = "/login")
-    public ResponseEntity<?> loginUser(@RequestParam("email") String email, @RequestParam("password") String password) {
+    public ResponseEntity<?> loggedUser(@RequestBody Users details){
+        System.out.println(details.getEmail() + " " + details.getPassword());
 
-        Optional<String> salt = repository.getSaltByEmail(email);
-        if(salt.isPresent()) {
+        String salt = userRepository.getSaltByEmail(details.getEmail());
 
-            Users loggedUser = repository.getUserByEmailAndPassword(
-                    email,
-                    BCrypt.hashpw(password, salt.get())
-            );
-
-            if(loggedUser==null)
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-
-            loggedUser.setLogged(true);
-            repository.save(loggedUser);
-
-            Pair<Long, String> userIdWithTokenPair = Pair.of(loggedUser.getId(), webTokenProvider.generateToken(loggedUser));
-            return new ResponseEntity<>(userIdWithTokenPair, HttpStatus.OK);
+        if(salt==null){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
+        Users loginUser = userRepository.getUserByEmailAndPassword(
+                details.getEmail(),
+                BCrypt.hashpw(
+                        details.getPassword(),
+                        salt
+                )
+
+        );
+
+
+        if(loginUser==null)
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        loginUser.setLogged(true);
+        userRepository.save(loginUser);
+
+        Pair<Long, String>  userIdWithTokenPair = Pair.of(loginUser.getId(), jsonToken.generateToken(loginUser));
+        return new ResponseEntity<>(userIdWithTokenPair, HttpStatus.OK);
+
     }
-}
+
+    @PostMapping(value = "/registration")
+    public void registration(@RequestBody Users users){
+
+        String salt = BCrypt.gensalt();
+        String hashedPassword = BCrypt.hashpw(users.getPassword(), salt);
+        users.setPassword(hashedPassword);
+        users.setSalt(salt);
+        users.setRole("USER");
+        users.setUser();
+        System.out.println(users);
+        Basket basket=new Basket();
+        users.setBasket(basket);
+        userRepository.save(users);
+    }
+
+        @PutMapping(value = "/logout")
+        public ResponseEntity<?> logoutUser(@RequestParam("userId")Long id) {
+            Optional<Users> loggedUser = userRepository.findById(id);
+            if(loggedUser.isPresent()) {
+                loggedUser.get().setLogged(false);
+                userRepository.save(loggedUser.get());
+
+                return new ResponseEntity<>(HttpStatus.OK);
+            }
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+

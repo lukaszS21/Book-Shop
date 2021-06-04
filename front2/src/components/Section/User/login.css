@@ -1,0 +1,92 @@
+.Back{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 94px;
+    display: flex;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    height: 40em;
+    width: 30%;
+    flex-direction: column;
+    align-items: center;
+
+}
+.Login{
+
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 52px 52px 51px 52px;
+    display: flex;
+    align-items: center;
+    height: 3em;
+    width: 60%;
+    margin-top: 2em;
+}
+.Login2{
+    background: #FF3F6C 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 52px 52px 51px 52px;
+    display: flex;
+    height: 3em;
+    width: 55%;
+    justify-content: center;
+
+
+}
+text{
+    margin: auto;
+    font: normal normal normal 20px/30px Segoe UI;
+    color:white;
+}
+.Input2{
+    display: flex;
+    flex-direction: column;
+}
+
+.colorText{
+
+    font: normal normal normal 20px/30px Segoe UI;
+    color:#FF3F6C;
+    margin-left: 1em;
+}
+input[placeholder="Enter Email or UserName"]{
+    overflow: auto;
+    outline: none;
+    resize: none;
+
+    text-align: center;
+    font: normal normal normal 20px/30px Segoe UI;
+    letter-spacing: 0px;
+    color: #707070;
+    background-color: transparent;
+    border: none;
+    margin-top: 3em;
+
+}
+
+.InputArea{
+    display: flex;
+    justify-content: left;
+    border-block-end: 1px solid #707070;
+}
+.ButtonLog{
+    outline: none;
+    background-color: #FF3F6C; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 4em;
+    border-radius: 47px;
+    width: 15em;
+}
+
+.Forgot{
+    margin-top: 2em;
+    color: #D2CDBF;
+}
+
