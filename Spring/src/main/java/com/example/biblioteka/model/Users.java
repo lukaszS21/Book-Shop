@@ -40,7 +40,7 @@ public class Users {
 
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "basket_id")
     private Basket basket;
     public Users(){
 

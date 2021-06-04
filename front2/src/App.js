@@ -7,17 +7,17 @@ import {Redirect, Route} from 'react-router';
 import axios from 'axios';
 import {BrowserRouter, Switch} from 'react-router-dom';
 import home from "./components/Section/home";
-import AudioBooks from "./components/Section/AudioBooks";
-import Ebooks from "./components/Section/Ebooks";
-import CurseBook from "./components/Section/CurseBook";
-import Comics from "./components/Section/Comics"
+import AudioBooks from "./components/Section/Book_List/AudioBooks";
+import Ebooks from "./components/Section/Book_List/Ebooks";
+import CurseBook from "./components/Section/Book_List/CurseBook";
+import Comics from "./components/Section/Book_List/Comics"
 import Help from "./components/Section/Help";
-import login from "./components/Section/login";
-import register from "./components/Section/register";
+import login from "./components/Section/User/login";
+import register from "./components/Section/User/register";
 import homeLog from "./components/Section/HomeLog";
 import Admin from "./components/Section/Admin/Admin"
-import myAcount from "./components/User/myAcount";
-import AccountSettings from "./components/User/myAcount";
+import myAcount from "./components/Section/User/myAcount";
+import AccountSettings from "./components/Section/User/myAcount";
 class App extends React.Component{
 
 

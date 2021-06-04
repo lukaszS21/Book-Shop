@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78bb7064-3816-4c5f-ae02-45605c35d6d6" name="Default Changelist" comment="BooksAuthor/Login/Register">
-      <change afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/RabitMq/publisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="78bb7064-3816-4c5f-ae02-45605c35d6d6" name="Default Changelist" comment="Logout/BackendBasket">
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/BooksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/enums/UserRoles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/model/Author.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/model/Basket.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/model/Basket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/model/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/model/Books.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/model/Users.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/Book1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/Book1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/AudioBooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book_List/AudioBooks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/Book.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/Comics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book_List/Comics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/CurseBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book_List/CurseBook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/Ebooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book_List/Ebooks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/ForRent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book_List/ForRent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/Help.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Help.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/User/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/User/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/User/register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/User/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/User/getUserDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/User/getUserDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/User/myAcount.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/User/myAcount.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +34,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -59,11 +70,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kokol\OneDrive\Pulpit\Zpai2\front2\src\components\Section\User" />
+      <recent name="C:\Users\kokol\OneDrive\Pulpit\Zpai2\front2\src\components\Section\Book_List" />
       <recent name="C:\Users\kokol\OneDrive\Pulpit\Zpai2\front2\src\components\Section\Admin" />
       <recent name="C:\Users\kokol\OneDrive\Pulpit\Zpai2\front2\public" />
       <recent name="C:\Users\kokol\OneDrive\Pulpit\Zpai2\front2\src\components\Section" />
-      <recent name="C:\Users\kokol\OneDrive\Pulpit\Zpai2\front2\src\components\img" />
-      <recent name="C:\Users\kokol\OneDrive\Pulpit\Zpai2\front2\src\components\Section\Book" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -129,7 +140,8 @@
       <workItem from="1622495435978" duration="4348000" />
       <workItem from="1622525254724" duration="2497000" />
       <workItem from="1622565466743" duration="8225000" />
-      <workItem from="1622718724250" duration="6523000" />
+      <workItem from="1622718724250" duration="6839000" />
+      <workItem from="1622806155637" duration="2348000" />
     </task>
     <task id="LOCAL-00001" summary="React/improvement">
       <created>1618693294866</created>
@@ -187,7 +199,21 @@
       <option name="project" value="LOCAL" />
       <updated>1622483232997</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Logout/BackendBasket">
+      <created>1622727927240</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1622727927240</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Logout/BackendBasket">
+      <created>1622727941946</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1622727941946</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +235,8 @@
     <MESSAGE value="React/improvement" />
     <MESSAGE value="login/Database/vievBooks" />
     <MESSAGE value="BooksAuthor/Login/Register" />
-    <option name="LAST_COMMIT_MESSAGE" value="BooksAuthor/Login/Register" />
+    <MESSAGE value="Logout/BackendBasket" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logout/BackendBasket" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

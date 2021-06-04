@@ -1,14 +1,14 @@
 
 import React,{Component} from 'react';
-import Lista from "./lista/Lista";
-import BookC from "./Book/BookC";
-export class CurseBook extends Component{
+import Lista from "../lista/Lista";
+import BookF from "../Book/BookF";
+export class ForRent extends Component{
     render() {
         return (
             <div className={"section"}>
                 <div className="Content">
                     <Lista/>
-                    <BookC/>
+                    <BookF/>
                 </div>
 
             </div>
@@ -17,4 +17,4 @@ export class CurseBook extends Component{
     }
 }
 
-export default CurseBook;
+export default ForRent;

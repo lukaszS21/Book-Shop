@@ -4,7 +4,7 @@ import './login.css'
 import {Link} from "react-router-dom";
 
 
-import { signin } from '../Autorisation/LoginAuth';
+import { signin } from '../../Autorisation/LoginAuth';
 import {useDispatch, useSelector} from "react-redux";
 
 export default function Login() {
@@ -15,6 +15,7 @@ export default function Login() {
 
         e.preventDefault();
         dispatch(signin(user));
+        alert("Login succesful")
         if(!auth.register_error){
             console.log("Wrong email or password!")
         }

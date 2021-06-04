@@ -29,6 +29,7 @@ public class Author implements Serializable {
     private String surname;
 
     private String publishing_house;
+
     @JsonIgnore
     @OneToMany(mappedBy = "author",cascade = CascadeType.ALL)
     private List<Books> books;

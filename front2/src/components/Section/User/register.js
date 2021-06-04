@@ -1,7 +1,7 @@
 
 import React,{Component} from 'react';
 import './register.css'
-import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css"
 import axios from "axios";
 import {Link} from "react-router-dom";
 export class register extends Component{
@@ -19,6 +19,7 @@ export class register extends Component{
 
         };
         console.log(user);
+        alert("User created succesful")
         axios.post("home/registration",user).then(
             res=>{
                 console.log(res);

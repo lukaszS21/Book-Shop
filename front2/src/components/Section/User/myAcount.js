@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserDetails } from "./getUserDetails";
 import axios from "axios";
-
+import "./myAcount.css"
 
 import {useHistory} from "react-router";
 
@@ -55,11 +55,6 @@ const AccountSettings = () => {
         });
     };
 
-    //     await axios.put(url, userInput,config).catch((error) => handleNetworkError(error, () => history.replace("/")));
-    //     getUserDetails().then((res) =>
-    //         dispatch({ type: "USERDATA_UPDATE", payload: res }).catch((error) => handleNetworkError(error, () => history.replace("/")))
-    //     ).catch((error) => handleNetworkError(error, () => history.replace("/")));
-    // };
 
 
     return (

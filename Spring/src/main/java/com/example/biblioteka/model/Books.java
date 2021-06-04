@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.util.Optional;
+import java.util.Set;
 
 @Entity
 @Table(name="book")
@@ -41,6 +42,11 @@ public class Books {
     @JoinColumn(name = "id_Author")
     private Author author;
 
+    @OneToMany(mappedBy = "books")
+    private Set<BookBasket> bookbasket;
+
+
+
     @Column
     private String DESCRIPTION;
 
@@ -56,7 +62,20 @@ public class Books {
         this.img=img;
         this.author=author;
 
+
         //this.id_BOOK = id_BOOK;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public Set<BookBasket> getBookbasket() {
+        return bookbasket;
+    }
+
+    public void setBookbasket(Set<BookBasket> bookbasket) {
+        this.bookbasket = bookbasket;
     }
 
     public String getImg() {

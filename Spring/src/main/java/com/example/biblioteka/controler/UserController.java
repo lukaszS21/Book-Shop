@@ -19,6 +19,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
+@RequestMapping("/api/users")
 //@RequestMapping("/users")
 public class UserController {
     private final UserRepository userRepository;
@@ -49,11 +50,31 @@ public class UserController {
         return userRepository.save(newUser);
     }
 
-    @PutMapping("/User/update")
+    @PutMapping(path = "/{id}/edit")
+    public ResponseEntity<Boolean> editUser(@RequestBody UserDetails details, @PathVariable("id") Long id) {
+        Optional<Users> optionalUser = userRepository.findById(id);
+        System.out.println("details");
+        System.out.println(details);
 
-    public Users  saveUser(@RequestBody  Users newUser){
-        return userRepository.save(newUser);
+
+        if(optionalUser.isPresent()) {
+            UserDetails userDetails = new UserDetails(
+                    details.getUsername(),
+                    details.getSurname(),
+                    details.getPhone(),
+                    details.getAdres()
+
+            );
+            System.out.println(userDetails);
+            Users user = optionalUser.get();
+            user.setUserDetails(userDetails);
+            userRepository.save(user);
+            return new ResponseEntity<>(true, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(false, HttpStatus.NOT_FOUND);
     }
+
+
     @DeleteMapping("/Del")
     public void deleteUser(@RequestParam  long index){
         userRepository.deleteById(index);

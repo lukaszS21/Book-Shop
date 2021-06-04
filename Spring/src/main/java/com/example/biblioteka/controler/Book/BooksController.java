@@ -37,15 +37,15 @@ public class BooksController {
         bookRepository.findAll().forEach(book::add);
         return book;
     }
-    @GetMapping("/Books")
-   public void addBook(){
-        Author author =new Author("janusz","ok","..");
-        authorRepository.save(author);
-        Books books=new Books("1","1",1,1,"1","1","1",author);
-
-        bookRepository.save(books);
-
-   }
+//    @GetMapping("/Books")
+//   public void addBook(){
+//        Author author =new Author("janusz","ok","..");
+//        authorRepository.save(author);
+//        Books books=new Books("1","1",1,1,"1","1","1",author);
+//
+//        bookRepository.save(books);
+//
+//   }
     @PostMapping(value = "/AddBook")
     public void addBook(@RequestBody Books books){
 
