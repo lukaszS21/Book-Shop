@@ -17,7 +17,7 @@ public class Basket {
     @OneToOne(mappedBy = "basket",cascade = CascadeType.ALL)
     private Users user;
 
-
+    @JsonIgnore
     @OneToMany(mappedBy = "basket")
     private Set<BookBasket> bookbasket;
 
@@ -49,4 +49,6 @@ public class Basket {
     public void setUser(Users user) {
         this.user = user;
     }
+
+
 }

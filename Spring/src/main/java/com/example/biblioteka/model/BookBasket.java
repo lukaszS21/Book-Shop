@@ -23,6 +23,10 @@ public class BookBasket {
         this.books = books;
     }
 
+    public BookBasket() {
+
+    }
+
     public Long getId() {
         return id;
     }

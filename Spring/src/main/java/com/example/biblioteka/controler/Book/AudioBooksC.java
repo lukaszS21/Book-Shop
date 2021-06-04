@@ -41,7 +41,6 @@ public class AudioBooksC {
     @GetMapping("/Audio")
     public List<Books> getBooksByType(){
         List<Books> books = new ArrayList<>();
-
        bookRepository.findByType("AudioBook").forEach(books::add);
         return books;
     }
