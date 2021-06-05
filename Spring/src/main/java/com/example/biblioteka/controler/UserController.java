@@ -3,6 +3,7 @@ package com.example.biblioteka.controler;
 import com.example.biblioteka.model.Basket;
 import com.example.biblioteka.model.UserDetails;
 import com.example.biblioteka.model.Users;
+import com.example.biblioteka.repository.UserDetailsRepository;
 import com.example.biblioteka.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -10,9 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.web.bind.annotation.*;
-import com.sun.istack.Nullable;
 
-import javax.validation.constraints.Null;
 import java.util.Optional;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,9 +22,11 @@ import java.util.List;
 //@RequestMapping("/users")
 public class UserController {
     private final UserRepository userRepository;
+    private final UserDetailsRepository userDetailsRepository;
     @Autowired
-    public UserController(UserRepository userRepository) {
+    public UserController(UserRepository userRepository, UserDetailsRepository userDetailsRepository) {
         this.userRepository = userRepository;
+        this.userDetailsRepository = userDetailsRepository;
     }
     @GetMapping({"/Userall"})
     public List<Users> getUsers(){
@@ -34,7 +35,8 @@ public class UserController {
         return users;
     }
 
-    @GetMapping("/{id}")
+
+    @GetMapping("Id/{id}")
     public ResponseEntity<Users> getUser(@PathVariable("id") Long id){
         return userRepository.findById(id).map(
                 user -> new ResponseEntity<>(user, HttpStatus.OK)).orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND)
@@ -50,29 +52,6 @@ public class UserController {
         return userRepository.save(newUser);
     }
 
-    @PutMapping(path = "/{id}/edit")
-    public ResponseEntity<Boolean> editUser(@RequestBody UserDetails details, @PathVariable("id") Long id) {
-        Optional<Users> optionalUser = userRepository.findById(id);
-        System.out.println("details");
-        System.out.println(details);
-
-
-        if(optionalUser.isPresent()) {
-            UserDetails userDetails = new UserDetails(
-                    details.getUsername(),
-                    details.getSurname(),
-                    details.getPhone(),
-                    details.getAdres()
-
-            );
-            System.out.println(userDetails);
-            Users user = optionalUser.get();
-            user.setUserDetails(userDetails);
-            userRepository.save(user);
-            return new ResponseEntity<>(true, HttpStatus.OK);
-        }
-        return new ResponseEntity<>(false, HttpStatus.NOT_FOUND);
-    }
 
 
     @DeleteMapping("/Del")
@@ -90,6 +69,23 @@ public class UserController {
         user.setSalt(salt);
         user.setRole("ADMIN");
         userRepository.save(user);
+    }
+    @PutMapping("/UserDetails/{id_user}")
+    public void changeDetails(@RequestBody Users details,@PathVariable("id_user")Long id_user){
+        System.out.println(id_user);
+        System.out.println(details);
+
+        Optional<Users> users=userRepository.findById(id_user);
+        Optional<UserDetails> details1=userDetailsRepository.findById(id_user);
+        users.get().getUserDetails().setUsername(details.getUserDetails().getUsername());
+        users.get().getUserDetails().setSurname(details.getUserDetails().getSurname());
+        users.get().getUserDetails().setAdres(details.getUserDetails().getAdres());
+        users.get().getUserDetails().setPhone(details.getUserDetails().getPhone());
+
+        Users user = users.get();
+        userRepository.save(user);
+
+
     }
 
 }
