@@ -62,3 +62,6 @@ i.fa.fa-user{
 .space3{
     margin-left: 1em;
 }
+.add_cart{
+    display: flex;
+}

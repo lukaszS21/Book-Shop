@@ -2,15 +2,13 @@
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #707070;
     border-radius: 94px;
-
     display: flex;
     margin: auto;
     margin-top: 2em;
     margin-bottom: 2em;
     height: 40em;
-    width: 40%;
+    width: 30%;
     flex-direction: column;
-
     align-items: center;
 
 }
@@ -97,4 +95,9 @@ text{
 }
 .bnt{
     width: 40%;
+}
+.Logintext{
+    margin: auto;
+    font: normal normal normal 20px/30px Segoe UI;
+    color:white;
 }

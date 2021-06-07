@@ -1,6 +1,6 @@
 package com.example.biblioteka.model;
 
-import com.example.biblioteka.enums.UserRoles;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.lang.Nullable;
 
@@ -133,18 +133,5 @@ public class Users {
         this.userDetails = userDetails;
     }
 
-    @Override
-    public String toString() {
-        return "Users{" +
-                "id=" + id +
-                ", email='" + email + '\'' +
-                ", salt='" + salt + '\'' +
-                ", password='" + password + '\'' +
-                ", logged=" + logged +
-                ", role='" + role + '\'' +
-                ", createdAt=" + createdAt +
-                ", userDetails=" + userDetails +
-                ", basket=" + basket +
-                '}';
-    }
+
 }

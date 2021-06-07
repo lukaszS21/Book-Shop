@@ -42,6 +42,7 @@ public class Books {
     @JoinColumn(name = "id_Author")
     private Author author;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "books")
     private Set<BookBasket> bookbasket;
 

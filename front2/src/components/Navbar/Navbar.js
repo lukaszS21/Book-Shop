@@ -36,8 +36,10 @@ function Navbar () {
     useEffect(() => {
         if (localStorage.getItem("token") !== null) {
             const token= localStorage.getItem("token");
+            setDecode(jwt_decode(token)) ;
             setInfo(jwt_decode(token)) ;
             setStatus(true);
+
             console.log(info);
         }
         console.log(info);
@@ -50,6 +52,7 @@ function Navbar () {
 
                     {/*<ul className={clicked ? "nav-menu-active:":"li2"}>*/}
                     <ul className="li2">
+
                         {decode.role==="ADMIN"?(
                             <li className={"nav"}>
                                 <i className="fa fa-user"></i>
@@ -72,7 +75,7 @@ function Navbar () {
                             <li className={"nav"}>
                                 <i className="fa fa-user"></i>
                                 <Link className='a' to='/myAcount' onClick={handleClick}>
-                                    YourAcount
+                                    {decode.name}
                                 </Link>
                             </li>
 

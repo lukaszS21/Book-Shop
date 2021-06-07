@@ -34,14 +34,10 @@ public class AudioBooksC {
         bookRepository.findAll().forEach(book::add);
         return book;
     }
-//    @GetMapping("/Audio")
-//    public Optional<Books> getBookByID(@RequestParam int index){
-//        return books.findByID(index);
-//    }
+
     @GetMapping("/Audio")
     public List<Books> getBooksByType(){
         List<Books> books = new ArrayList<>();
-
        bookRepository.findByType("AudioBook").forEach(books::add);
         return books;
     }

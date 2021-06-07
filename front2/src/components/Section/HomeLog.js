@@ -4,21 +4,21 @@ import axios from "axios";
 
 export class homeLog extends Component{
 
-    componentDidMount() {
-        const config={
-            headers:{
-                Authorization:'Bearer'+localStorage.getItem('token')
-            }
-        }
-        axios.get('user',config).then(
-            res=>{
-                console.log(res);
-            },
-            err=>{
-                console.log(err);
-            }
-        )
-    }
+    // componentDidMount() {
+    //     const config={
+    //         headers:{
+    //             Authorization:'Bearer'+localStorage.getItem('token')
+    //         }
+    //     }
+    //     axios.get('user',config).then(
+    //         res=>{
+    //             console.log(res);
+    //         },
+    //         err=>{
+    //             console.log(err);
+    //         }
+    //     )
+    // }
 
     render() {
         return (
