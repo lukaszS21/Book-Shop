@@ -2,7 +2,9 @@
 import React, {Component, useEffect,useState} from "react";
 
 import axios from "axios";
-import Book1 from "../Book/Book1";
+import Basket from './Basket'
+import "./Cart.css"
+import {Link} from "react-router-dom";
 
 class Cart extends React.Component {
 
@@ -11,6 +13,7 @@ class Cart extends React.Component {
         this.state={
             books:[],
         }
+
 
     }
     componentDidMount()
@@ -34,14 +37,28 @@ class Cart extends React.Component {
     {
         return (
 
-          <div>
+          <div className={"cart"}>
+              <div className={""}>
+                  Cart:
+              </div>
               {
                   this.state.books.map(
                       book=>
+                          <div className={"cart2"}>
+                              <Basket book={book} key={book.id}/>
 
-                           <Book1 book={book} key={book.id}/>
+                          </div>
+
+
                   )
               }
+
+              <button className={"buy"} >
+                  <Link to='/Buy'>
+                      Buy
+                  </Link>
+              </button>
+
           </div>
         );
     }

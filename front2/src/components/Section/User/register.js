@@ -34,10 +34,26 @@ export class register extends Component{
     render() {
         return (
 
-                <form  onSubmit={this.handleSubmit} className="Back2">
-                        <h3>Sing Up</h3>
 
-                        <div className={"form-group"}>
+                <form  onSubmit={this.handleSubmit} className="Back2">
+                    <div className="Login">
+
+                        <div className="Login2" >
+                            <Link  className="Logintext" to='/login'>
+                                LogIn
+                            </Link>
+                        </div>
+
+                        <div className="colorText" >
+                            <Link  className="colorText"  to='/register'>
+                                SignUP
+                            </Link>
+
+                        </div>
+                    </div>
+
+
+                    <div className={"form-group"}>
                             <label>Email</label>
                             <input type="email" className="form-control" placeholder="Email"
                             onChange={event => this.email=event.target.value}/>

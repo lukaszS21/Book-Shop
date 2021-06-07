@@ -40,8 +40,8 @@ export class Admin extends Component{
     render() {
         return (
 
-            <form  onSubmit={this.handleSubmit} className="Back2">
-                <h3>Sing Up</h3>
+            <form  onSubmit={this.handleSubmit} className="Back3">
+                <h3>Add Book</h3>
 
                 <div className={"form-group"}>
                     <label>Category</label>

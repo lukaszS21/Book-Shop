@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78bb7064-3816-4c5f-ae02-45605c35d6d6" name="Default Changelist" comment="Basket">
+      <change afterPath="$PROJECT_DIR$/public/img/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/AudioBooksC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/AudioBooksC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Section/Admin/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Admin/Admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Section/Basket/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Basket/Cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/Book.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/Book.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/Book1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/Book1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Section/HomeLog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/HomeLog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/User/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/User/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Section/User/myAcount.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/User/myAcount.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/User/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/User/register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/User/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/User/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +57,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -60,6 +69,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kokol\OneDrive\Pulpit\Zpai2\front2\public\img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kokol\OneDrive\Pulpit\Zpai2\front2\src\components\Section\User" />
       <recent name="C:\Users\kokol\OneDrive\Pulpit\Zpai2\front2\src\components\Section\Book_List" />
@@ -136,7 +148,9 @@
       <workItem from="1622809815966" duration="80000" />
       <workItem from="1622811001977" duration="1263000" />
       <workItem from="1622832732465" duration="5743000" />
-      <workItem from="1622884501364" duration="10051000" />
+      <workItem from="1622884501364" duration="10102000" />
+      <workItem from="1622911764996" duration="566000" />
+      <workItem from="1623071249522" duration="2846000" />
     </task>
     <task id="LOCAL-00001" summary="React/improvement">
       <created>1618693294866</created>

@@ -63,7 +63,11 @@ class Book1 extends React.Component {
                         </div>
                         <div>
                             {this.state.book.description}
+
                         </div>
+
+                    </div>
+                    <div className={"add_cart"}>
                         <div className={"shop"}>
                             <button>Add</button>
                             <i className="fa fa-cart-arrow-down"></i>

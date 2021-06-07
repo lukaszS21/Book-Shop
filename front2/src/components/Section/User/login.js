@@ -1,6 +1,7 @@
 
 import React, {useState} from 'react';
 import './login.css'
+
 import {Link} from "react-router-dom";
 
 
@@ -27,7 +28,6 @@ export default function Login() {
 
             <form onSubmit={handleSubmit} className="Back">
                 <div className="Login">
-
                     <div className="Login2">
                         <text>Log In</text>
                     </div>
