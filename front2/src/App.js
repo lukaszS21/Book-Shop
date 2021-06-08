@@ -4,7 +4,7 @@ import Section from "./components/Section";
 import PageFooter from "./components/PageFooter/PageFooter";
 import {BrowserRouter as Router} from 'react-router-dom'
 import {Redirect, Route} from 'react-router';
-import axios from 'axios';
+
 import {BrowserRouter, Switch} from 'react-router-dom';
 import home from "./components/Section/home";
 import AudioBooks from "./components/Section/Book_List/AudioBooks";
@@ -15,7 +15,7 @@ import Help from "./components/Section/Help";
 import login from "./components/Section/User/login";
 import register from "./components/Section/User/register";
 import homeLog from "./components/Section/HomeLog";
-import Admin from "./components/Section/Admin/Admin"
+import Admin1 from "./components/Section/Admin/Admin1"
 import myAcount from "./components/Section/User/myAcount";
 import AccountSettings from "./components/Section/User/myAcount";
 import Cart from "./components/Section/Basket/Cart";
@@ -44,7 +44,7 @@ class App extends React.Component{
                     <Route path='/Login' component={login}/>
                     <Route path='/Help' component={Help}/>
                     <Route path='/register' component={register}/>
-                    <Route path='/admin' component={Admin}/>
+                    <Route path='/admin' component={Admin1}/>
                     <Route path='/myAcount' component={ AccountSettings}/>
                     <Route path='/Cart' component={ Cart}/>
 

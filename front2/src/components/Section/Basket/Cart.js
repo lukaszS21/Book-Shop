@@ -28,15 +28,11 @@ class Cart extends React.Component {
 
         const result=axios.get("http://localhost:8080/GetListBook/"+localStorage.getItem("id"));
         return result;
-
-
     }
-
 
     render()
     {
         return (
-
           <div className={"cart"}>
               <div className={""}>
                   Cart:
@@ -46,10 +42,7 @@ class Cart extends React.Component {
                       book=>
                           <div className={"cart2"}>
                               <Basket book={book} key={book.id}/>
-
                           </div>
-
-
                   )
               }
 
@@ -58,11 +51,8 @@ class Cart extends React.Component {
                       Buy
                   </Link>
               </button>
-
           </div>
         );
     }
 }
-
-
 export default Cart;

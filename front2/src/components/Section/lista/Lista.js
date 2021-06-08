@@ -24,7 +24,6 @@ export class Lista extends Component{
                         <word>Mystery</word>
                         <word>Music</word>
                         <word>Religion</word>
-
                     </lista>
                 </div>
             </section>

@@ -39,17 +39,14 @@ function Navbar () {
             setDecode(jwt_decode(token)) ;
             setInfo(jwt_decode(token)) ;
             setStatus(true);
-
             console.log(info);
         }
         console.log(info);
     }, [status, auth.login]);
 
         return (
-
             <nav className="NavbarItems">
                 <header className="App-header">
-
                     {/*<ul className={clicked ? "nav-menu-active:":"li2"}>*/}
                     <ul className="li2">
 
@@ -69,7 +66,6 @@ function Navbar () {
                            </Link>
                        </li>
 
-
                         {(auth.login) ? (
 
                             <li className={"nav"}>
@@ -85,7 +81,6 @@ function Navbar () {
                         )}
 
                         {(auth.login) ? (
-
                             <li className={"nav"}>
                                 <i className="fa fa-user"></i>
                                 <Link className='a' to='/home' onClick={handleLogout}>
@@ -102,7 +97,6 @@ function Navbar () {
                             </li>
 
                         )}
-
                     </ul>
                     <div className="nav-icon" onClick={handleClick}></div>
                 </header>
@@ -150,8 +144,6 @@ function Navbar () {
                                 <Link className='a' to='/Comics'>
                                     Comics
                                 </Link>
-
-
                             </li>
                         </ul>
             </nav>

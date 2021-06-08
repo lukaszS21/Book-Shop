@@ -1,8 +1,6 @@
 package com.example.biblioteka.repository;
 
-import com.example.biblioteka.model.Basket;
 import com.example.biblioteka.model.BookBasket;
-import com.example.biblioteka.model.Books;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

@@ -33,8 +33,6 @@ export class register extends Component{
     };
     render() {
         return (
-
-
                 <form  onSubmit={this.handleSubmit} className="Back2">
                     <div className="Login">
 
@@ -51,8 +49,6 @@ export class register extends Component{
 
                         </div>
                     </div>
-
-
                     <div className={"form-group"}>
                             <label>Email</label>
                             <input type="email" className="form-control" placeholder="Email"
@@ -78,14 +74,8 @@ export class register extends Component{
                             <input type="text" className="form-control" placeholder="Last Name"
                                    onChange={event => this.surname=event.target.value}/>
                         </div>
-
-
                         <button className="btn btn-danger btn-lg ">Sing UP</button>
-
-
                 </form>
-
-
         );
     }
 }

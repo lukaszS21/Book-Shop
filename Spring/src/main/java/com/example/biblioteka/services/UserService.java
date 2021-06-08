@@ -4,7 +4,6 @@ import com.example.biblioteka.model.Users;
 import com.example.biblioteka.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.Optional;
 
 @Service

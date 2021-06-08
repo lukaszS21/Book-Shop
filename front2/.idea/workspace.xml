@@ -1,22 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78bb7064-3816-4c5f-ae02-45605c35d6d6" name="Default Changelist" comment="Basket">
-      <change afterPath="$PROJECT_DIR$/public/img/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/3.jpg" afterDir="false" />
+    <list default="true" id="78bb7064-3816-4c5f-ae02-45605c35d6d6" name="Default Changelist" comment="end">
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/RabitMq/ClientMq.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/RabitMq/ClientMq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/RabitMq/RabbitMenager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/RabitMq/RabbitMenager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/RabitMq/publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/RabitMq/publisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/BasketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/BasketController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/AudioBooksC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/AudioBooksC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/BooksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/ComicsC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/ComicsC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/CourseBookC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/CourseBookC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/EbooksC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/Book/EbooksC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/controler/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/repository/AuthorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/repository/AuthorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/repository/BookBasketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/repository/BookBasketRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/repository/ShopRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/repository/ShopRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/services/BookBasketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/services/BookBasketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/services/UserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/services/UserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/src/main/java/com/example/biblioteka/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageFooter/PageFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageFooter/PageFooter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RabitMq/Add.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RabitMq/Add.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Section/Admin/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Admin/Admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/Basket/Basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Basket/Basket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Section/Basket/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Basket/Cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/Book/Book.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/Book.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Section/Book/Book1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book/Book1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/Book_List/AudioBooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book_List/AudioBooks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/Book_List/ForRent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Book_List/ForRent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/Help.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/Help.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Section/HomeLog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/HomeLog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/User/getUserDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/User/getUserDetails.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Section/User/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/User/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/User/myAcount.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/User/myAcount.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/User/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/User/register.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Section/User/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/User/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/lista/Lista.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section/lista/Lista.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section/test.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +171,8 @@
       <workItem from="1622832732465" duration="5743000" />
       <workItem from="1622884501364" duration="10102000" />
       <workItem from="1622911764996" duration="566000" />
-      <workItem from="1623071249522" duration="2846000" />
+      <workItem from="1623071249522" duration="4500000" />
+      <workItem from="1623081703819" duration="7525000" />
     </task>
     <task id="LOCAL-00001" summary="React/improvement">
       <created>1618693294866</created>
@@ -236,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622841834329</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="end">
+      <created>1623074319822</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1623074319823</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +290,8 @@
     <MESSAGE value="Logout/BackendBasket" />
     <MESSAGE value="Code_Clear" />
     <MESSAGE value="Basket" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basket" />
+    <MESSAGE value="end" />
+    <option name="LAST_COMMIT_MESSAGE" value="end" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

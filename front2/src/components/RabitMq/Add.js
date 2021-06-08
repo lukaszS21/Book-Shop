@@ -69,20 +69,14 @@ export default function Add() {
     return (
 
         <div className={"Add"}>
-
                 <div className="toastBody">
                     <p>
                         <div>
                             {notification}
                         </div>
-
                     </p>
-
                 </div>
-
-
         </div>
-
 
     )
 }

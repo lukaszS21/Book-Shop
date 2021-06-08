@@ -10,7 +10,6 @@ export class ForRent extends Component{
                     <Lista/>
                     <BookF/>
                 </div>
-
             </div>
 
         );

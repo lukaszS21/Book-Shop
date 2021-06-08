@@ -44,7 +44,6 @@ class Book1 extends React.Component {
     {
         return (
             <form onSubmit={this.handleSubmit} className="Books">
-
                 <div className={"image"}>
                     <img className={"ImgBook"} src={this.state.book.img} />
                 </div>
@@ -63,9 +62,7 @@ class Book1 extends React.Component {
                         </div>
                         <div>
                             {this.state.book.description}
-
                         </div>
-
                     </div>
                     <div className={"add_cart"}>
                         <div className={"shop"}>
@@ -78,6 +75,4 @@ class Book1 extends React.Component {
         );
     }
 }
-
-
 export default Book1;
