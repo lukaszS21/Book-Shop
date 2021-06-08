@@ -9,11 +9,9 @@ export class Help extends Component{
                     <div className={"help"}>
                         <div className={"word"}>You need help?</div>
                         <div className={"word"}>Contact us now</div>
-
                         <i className="word">Phone:508963621</i>
                         <i className="word">Email:lukaszstolarz@op.pl</i>
                         <i className="word">Monday- Friday 11:00-23:00</i>
-
                     </div>
                 </div>
             </div>
@@ -21,5 +19,4 @@ export class Help extends Component{
         );
     }
 }
-
 export default Help;

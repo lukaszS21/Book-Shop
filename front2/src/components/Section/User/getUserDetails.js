@@ -8,9 +8,7 @@ export const getUserDetails = async () => {
         }
     }
 
-
     let user = await axios.get(url, config);
-
 
     return user.data;
 }

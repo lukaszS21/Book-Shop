@@ -1,10 +1,8 @@
 
 import React, {Component, useEffect,useState} from "react";
 
-import axios from "axios";
+
 import './Cart.css'
-
-
 class Basket extends React.Component {
 
     constructor(props)
@@ -28,7 +26,6 @@ class Basket extends React.Component {
     {
         return (
             <div className="Basket">
-
                     <div>
                         Title:{this.state.book.title}
                     </div>
@@ -38,7 +35,6 @@ class Basket extends React.Component {
                             {this.state.book.author.surname}
                         </div>
                     </div>
-
                     <div className={"Basket_space"}>
                        Price: {this.state.book.price}
                     </div>
@@ -46,6 +42,4 @@ class Basket extends React.Component {
         );
     }
 }
-
-
 export default Basket;

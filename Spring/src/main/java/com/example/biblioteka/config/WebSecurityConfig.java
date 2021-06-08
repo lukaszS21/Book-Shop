@@ -24,13 +24,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         UsernamePasswordAuthenticationFilter.class
                 )
                 .authorizeRequests()
-               .antMatchers(HttpMethod.GET, "*").permitAll()
-                .antMatchers(HttpMethod.POST, "*").permitAll()
-                .antMatchers(HttpMethod.PUT, "*").permitAll()
-                .antMatchers(HttpMethod.DELETE, "*").permitAll();
-//                .antMatchers(HttpMethod.POST, "/home/login").permitAll()
-//               .antMatchers(HttpMethod.POST, "/home/registration").permitAll()
-//              .antMatchers(HttpMethod.POST, "/book/AddBook").permitAll()
+               .antMatchers(HttpMethod.GET, "/book/**").permitAll()
+                .antMatchers(HttpMethod.GET, "/GetListBook/{id_user}").permitAll()
+                .antMatchers(HttpMethod.PUT, "/**").permitAll()
+                .antMatchers(HttpMethod.DELETE, "*").permitAll()
+                .antMatchers(HttpMethod.POST, "/home/login").permitAll()
+                .antMatchers(HttpMethod.POST, "/home/registration").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/users/**").permitAll()
+                .antMatchers(HttpMethod.POST, "/addToBasket/{id_book}/{id_user}").permitAll()
+                .antMatchers(HttpMethod.POST, "/GetListBook/{id_user}").permitAll()
+                .antMatchers(HttpMethod.POST, "/book/**").permitAll()
+                .anyRequest().authenticated();
 //               .antMatchers( "/book/**").permitAll().anyRequest().authenticated();
 
     }

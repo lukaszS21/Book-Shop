@@ -44,7 +44,6 @@ public class LoginController {
 
         );
 
-
         if(loginUser==null)
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         loginUser.setLogged(true);

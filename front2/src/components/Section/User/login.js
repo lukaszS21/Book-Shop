@@ -4,7 +4,6 @@ import './login.css'
 
 import {Link} from "react-router-dom";
 
-
 import { signin } from '../../Autorisation/LoginAuth';
 import {useDispatch, useSelector} from "react-redux";
 
@@ -22,10 +21,10 @@ export default function Login() {
         }
 
 
+
     }
 
         return (
-
             <form onSubmit={handleSubmit} className="Back">
                 <div className="Login">
                     <div className="Login2">
@@ -38,7 +37,6 @@ export default function Login() {
                         </Link>
                     </div>
                 </div>
-
                 <div className={"form-group"}>
                     <label>Email</label>
                     <input type="email" className="form-control" placeholder="Email"
@@ -49,11 +47,8 @@ export default function Login() {
                     <input className="form-control" type="password" id="inputPassword2" placeholder="Password"
                            onChange={event => user.password = event.target.value}/>
                 </div>
-
                 <button className="btn btn-danger btn-lg ">Login</button>
-
             </form>
-
 
         );
     }

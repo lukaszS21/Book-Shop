@@ -1,13 +1,10 @@
 package com.example.biblioteka.RabitMq;
 
 
-import org.aspectj.bridge.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.web.bind.annotation.*;
-
 import java.util.Random;
 
 

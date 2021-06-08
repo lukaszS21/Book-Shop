@@ -1,16 +1,10 @@
 package com.example.biblioteka.controler.Book;
 
-import com.example.biblioteka.model.Author;
 import com.example.biblioteka.model.Books;
-
-
 import com.example.biblioteka.repository.AuthorRepository;
 import com.example.biblioteka.repository.BookRepository;
 import com.example.biblioteka.services.BookService;
-import org.springframework.beans.factory.annotation.Autowired;
-import com.sun.istack.Nullable;
 import org.springframework.web.bind.annotation.*;
-import java.util.Optional;
 import java.util.ArrayList;
 import java.util.List;
 
