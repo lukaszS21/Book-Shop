@@ -1,30 +1,26 @@
 package com.example.biblioteka.RabitMq;
 
-
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-import java.util.Random;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
-@RequestMapping(value = "/rabbit")
+@RequestMapping("/rabbit")
 public class publisher {
 
+    private final RabbitTemplate rabbitTemplate;
 
-    @Autowired
-    private RabbitTemplate rabbitTemplate;
-    @Autowired
-    private RabbitMenager rabbitMenager;
-
-    @GetMapping("/message")
-    public String get(@RequestParam String message){
-        Random random = new Random();
-        String queueName = "Queue1" + random.nextInt(10);
-        rabbitMenager.putQueue(queueName);
-        rabbitTemplate.convertAndSend(queueName,message);
-        return message;
+    public publisher(RabbitTemplate rabbitTemplate) {
+        this.rabbitTemplate = rabbitTemplate;
     }
 
-
-
+    @GetMapping("/message")
+    public String sendMessage(@RequestParam String message) {
+        rabbitTemplate.convertAndSend(RabbitConfig.QUEUE_NAME, message);
+        return message;
+    }
 }

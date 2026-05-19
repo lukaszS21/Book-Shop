@@ -8,5 +8,6 @@ import org.springframework.stereotype.Repository;
 public interface AuthorRepository extends CrudRepository<Author, Long> {
 
         Author getAuthorByName(String name);
+
         Author findByName(String name);
 }

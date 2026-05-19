@@ -14,7 +14,7 @@ export default function Add() {
         "Great new audiobooks!",
         "By it Today!",
         "You want to read something interesting?",
-        "By it Now!"
+        "Buy it Now!"
     ])
     const changeStatus = (stat) => {
         setStatus(stat);

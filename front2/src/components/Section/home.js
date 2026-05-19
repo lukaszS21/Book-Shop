@@ -29,7 +29,7 @@ export class home extends Component{
                     </word>
                 </div>
                 <div className={"rec"}>
-                    By it Now!
+                    Buy it Now!
                 </div>
                 <div className={"best"}>
                     Best Audiobooks
