@@ -1,9 +1,130 @@
-select{
-    display: flex;
-    width: 100%;
+.adminPage {
+    min-height: 100vh;
+    padding: 44px clamp(18px, 5vw, 72px);
+    background:
+            radial-gradient(circle at top left, rgba(255, 122, 89, 0.14), transparent 34%),
+            linear-gradient(180deg, #fff7ed 0%, #f8fafc 48%, #ffffff 100%);
 }
 
-.form-group2{
-    height: 100%;
-    width: 34%;
+.Back3 {
+    width: min(100%, 1040px);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 0 auto;
+    padding: clamp(28px, 5vw, 52px);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 34px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.09);
+    backdrop-filter: blur(18px);
+}
+
+.adminHeader {
+    margin-bottom: 8px;
+}
+
+.adminEyebrow {
+    display: inline-flex;
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(249, 115, 22, 0.12);
+    color: #ea580c;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.adminHeader h1 {
+    margin: 18px 0 12px;
+    color: #111827;
+    font-size: clamp(38px, 6vw, 64px);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.055em;
+}
+
+.adminHeader p {
+    max-width: 680px;
+    margin: 0;
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.adminFormGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.adminWide {
+    grid-column: 1 / -1;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+}
+
+.form-group label {
+    color: #334155;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.form-control,
+select {
+    width: 100%;
+    min-height: 50px;
+    padding: 0 16px;
+    border: 1px solid rgba(148, 163, 184, 0.38);
+    border-radius: 16px;
+    outline: none;
+    background: #ffffff;
+    color: #111827;
+    font: 600 15px/1.2 "Segoe UI", Arial, sans-serif;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus,
+select:focus {
+    border-color: rgba(249, 115, 22, 0.8);
+    box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.12);
+}
+
+.adminButton {
+    align-self: flex-end;
+    min-width: 170px;
+    min-height: 52px;
+    border: 0;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ff7a59, #f97316);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 16px 34px rgba(249, 115, 22, 0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.adminButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 48px rgba(249, 115, 22, 0.36);
+}
+
+@media screen and (max-width: 720px) {
+    .adminFormGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .adminButton {
+        width: 100%;
+    }
 }

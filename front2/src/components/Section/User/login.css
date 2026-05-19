@@ -1,92 +1,140 @@
-.Back{
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #707070;
-    border-radius: 94px;
-    display: flex;
-    margin: auto;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    height: 40em;
-    width: 30%;
-    flex-direction: column;
-    align-items: center;
-
-}
-.Login{
-
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #707070;
-    border-radius: 52px 52px 51px 52px;
+.authPage {
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    height: 3em;
-    width: 60%;
-    margin-top: 2em;
-}
-.Login2{
-    background: #FF3F6C 0% 0% no-repeat padding-box;
-    border: 1px solid #707070;
-    border-radius: 52px 52px 51px 52px;
-    display: flex;
-    height: 3em;
-    width: 55%;
     justify-content: center;
-
-
+    padding: 44px 18px;
+    background:
+            radial-gradient(circle at top left, rgba(255, 122, 89, 0.14), transparent 34%),
+            linear-gradient(180deg, #fff7ed 0%, #f8fafc 48%, #ffffff 100%);
 }
-text{
-    margin: auto;
-    font: normal normal normal 20px/30px Segoe UI;
-    color:white;
-}
-.Input2{
+
+.Back {
+    width: min(100%, 460px);
     display: flex;
     flex-direction: column;
+    gap: 18px;
+    padding: 34px;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.09);
+    backdrop-filter: blur(18px);
 }
 
-.colorText{
-
-    font: normal normal normal 20px/30px Segoe UI;
-    color:#FF3F6C;
-    margin-left: 1em;
-}
-input[placeholder="Enter Email or UserName"]{
-    overflow: auto;
-    outline: none;
-    resize: none;
-
+.authHeader {
     text-align: center;
-    font: normal normal normal 20px/30px Segoe UI;
-    letter-spacing: 0px;
-    color: #707070;
-    background-color: transparent;
-    border: none;
-    margin-top: 3em;
-
 }
 
-.InputArea{
-    display: flex;
-    justify-content: left;
-    border-block-end: 1px solid #707070;
+.authEyebrow {
+    display: inline-flex;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(249, 115, 22, 0.12);
+    color: #ea580c;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
 }
-.ButtonLog{
-    outline: none;
-    background-color: #FF3F6C; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
+
+.authHeader h1 {
+    margin: 16px 0 8px;
+    color: #111827;
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: -0.045em;
+}
+
+.authHeader p {
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.authSwitch {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 6px;
+    border-radius: 999px;
+    background: #f1f5f9;
+}
+
+.authSwitchActive,
+.authSwitchLink {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    font-weight: 900;
     text-decoration: none;
-    display: inline-block;
+}
+
+.authSwitchActive {
+    background: linear-gradient(135deg, #ff7a59, #f97316);
+    color: #ffffff;
+    box-shadow: 0 12px 26px rgba(249, 115, 22, 0.24);
+}
+
+.authSwitchLink {
+    color: #64748b;
+}
+
+.authSwitchLink:hover {
+    color: #f97316;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+}
+
+.form-group label {
+    color: #334155;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.form-control {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 16px;
+    border: 1px solid rgba(148, 163, 184, 0.38);
+    border-radius: 16px;
+    outline: none;
+    background: #ffffff;
+    color: #111827;
+    font: 600 15px/1.2 "Segoe UI", Arial, sans-serif;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: rgba(249, 115, 22, 0.8);
+    box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.12);
+}
+
+.authButton {
+    min-height: 52px;
+    margin-top: 8px;
+    border: 0;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ff7a59, #f97316);
+    color: #ffffff;
     font-size: 16px;
-    margin-top: 4em;
-    border-radius: 47px;
-    width: 15em;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 16px 34px rgba(249, 115, 22, 0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.Forgot{
-    margin-top: 2em;
-    color: #D2CDBF;
+.authButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 48px rgba(249, 115, 22, 0.36);
 }
-

@@ -1,1 +1,72 @@
+.section {
+    min-height: 100vh;
+    padding: 44px clamp(18px, 5vw, 72px);
+    background:
+            radial-gradient(circle at top left, rgba(255, 122, 89, 0.13), transparent 34%),
+            linear-gradient(180deg, #fff7ed 0%, #f8fafc 48%, #ffffff 100%);
+}
 
+.Content {
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    width: 100%;
+}
+
+.catalogLayout {
+    align-items: flex-start;
+}
+
+.catalogHeader {
+    margin-bottom: 34px;
+    padding: clamp(28px, 4vw, 48px);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.09);
+    backdrop-filter: blur(18px);
+}
+
+.catalogEyebrow {
+    display: inline-flex;
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(249, 115, 22, 0.12);
+    color: #ea580c;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.catalogHeader h1 {
+    margin: 18px 0 12px;
+    color: #111827;
+    font-size: clamp(38px, 6vw, 70px);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.055em;
+}
+
+.catalogHeader p {
+    max-width: 720px;
+    margin: 0;
+    color: #64748b;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+@media screen and (max-width: 900px) {
+    .section {
+        padding: 28px 16px;
+    }
+
+    .Content {
+        flex-direction: column;
+    }
+
+    .catalogHeader {
+        border-radius: 24px;
+    }
+}

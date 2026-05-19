@@ -1,30 +1,261 @@
-.add{
-    display: flex;
-    justify-content: center;
-    height: 13em;
-    align-items: center;
-
-    border: 1px solid #707070;
-}
-.section2{
-    background-color: #f7eeee;
+.section2 {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    gap: 36px;
+    padding: 44px clamp(18px, 5vw, 72px);
+    background:
+            radial-gradient(circle at top left, rgba(255, 122, 89, 0.14), transparent 34%),
+            linear-gradient(180deg, #fff7ed 0%, #f8fafc 48%, #ffffff 100%);
+}
 
+.homeHero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.6fr);
+    gap: 28px;
+    align-items: stretch;
 }
-.rec{
+
+.homeHeroContent,
+.homeHeroCard,
+.rec,
+.best {
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.09);
+    backdrop-filter: blur(18px);
+}
+
+.homeHeroContent {
+    padding: clamp(32px, 5vw, 64px);
+}
+
+.homeEyebrow,
+.cardLabel {
+    display: inline-flex;
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(249, 115, 22, 0.12);
+    color: #ea580c;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.homeHero h1 {
+    max-width: 900px;
+    margin: 18px 0 18px;
+    color: #111827;
+    font-size: clamp(38px, 6vw, 76px);
+    font-weight: 900;
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+}
+
+.homeHero p {
+    max-width: 680px;
+    margin: 0;
+    color: #64748b;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.homeHeroActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+.homePrimaryButton,
+.homeSecondaryButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 22px;
+    border-radius: 999px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.homePrimaryButton {
+    background: linear-gradient(135deg, #ff7a59, #f97316);
+    color: #ffffff;
+    box-shadow: 0 16px 34px rgba(249, 115, 22, 0.28);
+}
+
+.homeSecondaryButton {
+    background: #ffffff;
+    color: #111827;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.homePrimaryButton:hover,
+.homeSecondaryButton:hover {
+    transform: translateY(-2px);
+}
+
+.homeHeroCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 360px;
+    padding: 30px;
+    color: #ffffff;
+    overflow: hidden;
+    background:
+            radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.26), transparent 28%),
+            radial-gradient(circle at 80% 0%, rgba(255, 184, 108, 0.42), transparent 34%),
+            linear-gradient(145deg, #111827 0%, #1f2937 46%, #f97316 140%);
+}
+
+.homeHeroCard::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    width: 96px;
+    height: 132px;
+    border-radius: 16px;
+    background:
+            linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(255, 237, 213, 0.94));
+    box-shadow:
+            -14px 14px 0 rgba(255, 255, 255, 0.2),
+            0 22px 45px rgba(0, 0, 0, 0.24);
+    transform: rotate(8deg);
+}
+
+.homeHeroCard::after {
+    content: "♪";
+    position: absolute;
+    top: 64px;
+    right: 58px;
+    color: #f97316;
+    font-size: 42px;
+    font-weight: 900;
+    transform: rotate(8deg);
+}
+
+.homeHeroCard span,
+.homeHeroCard strong,
+.homeHeroCard p {
+    position: relative;
+    z-index: 1;
+}
+
+.homeHeroCard span {
+    width: fit-content;
+    margin-bottom: 12px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.18);
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.homeHeroCard strong {
+    font-size: 34px;
+    line-height: 1.05;
+}
+
+.homeHeroCard p {
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.add {
     display: flex;
     justify-content: center;
-    height: 15em;
     align-items: center;
-    background-color: #f7eeee;
-    border: 1px solid #707070;
 }
-.best{
+
+.homeCards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.rec,
+.best {
+    min-height: 240px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    height: 15em;
-    align-items: center;
-    background-color: #f7eeee;
-    border: 1px solid #707070;
+    padding: 34px;
+}
+
+.rec h2,
+.best h2 {
+    margin: 18px 0 10px;
+    color: #111827;
+    font-size: clamp(28px, 4vw, 46px);
+    font-weight: 900;
+    letter-spacing: -0.035em;
+}
+
+.rec p,
+.best p {
+    max-width: 520px;
+    margin: 0;
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.65;
+}
+
+@media screen and (max-width: 900px) {
+    .homeHero {
+        grid-template-columns: 1fr;
+    }
+
+    .homeHeroCard {
+        min-height: 280px;
+    }
+
+    .homeCards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .section2 {
+        padding: 28px 16px;
+        gap: 24px;
+    }
+
+    .homeHeroContent,
+    .homeHeroCard,
+    .rec,
+    .best {
+        border-radius: 24px;
+    }
+
+    .homeHeroActions {
+        flex-direction: column;
+    }
+
+    .homePrimaryButton,
+    .homeSecondaryButton {
+        width: 100%;
+    }
+
+    .homeHeroCard::before {
+        width: 72px;
+        height: 100px;
+        top: 22px;
+        right: 22px;
+    }
+
+    .homeHeroCard::after {
+        top: 48px;
+        right: 45px;
+        font-size: 32px;
+    }
 }

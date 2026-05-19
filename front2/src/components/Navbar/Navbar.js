@@ -1,155 +1,159 @@
-import React, {Component, useEffect, useState} from 'react';
-
-import './Navbar.css'
+import React, { useEffect, useState } from "react";
+import "./Navbar.css";
 
 import logo3 from "../../logo3.png";
-import {Link} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
-import {useHistory} from "react-router";
-import {signout} from "../Autorisation/LoginAuth";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router";
+import { signout } from "../Autorisation/LoginAuth";
 import jwt_decode from "jwt-decode";
-function Navbar () {
+
+function Navbar() {
     const [clicked, setClicked] = useState(false);
+    const [decode, setDecode] = useState({ role: "NULL", name: "NULL" });
+    const [info, setInfo] = useState({ role: "NULL", name: "NULL" });
+    const [status, setStatus] = useState(false);
 
-    const handleClick = () =>setClicked(!clicked);
-
-
-    const changeClicked = () => setClicked(!clicked);
-    const auth = useSelector(state => state.auth)
+    const auth = useSelector(state => state.auth);
     const dispatch = useDispatch();
     const history = useHistory();
+
+    const handleClick = () => {
+        setClicked(!clicked);
+    };
+
     const handleLogout = () => {
-
-
         dispatch(signout()).then(() => {
-            history.replace('/');
+            history.replace("/");
             setStatus(false);
-            setInfo({role: "NULL", name: "NULL"});
-        })
-        if(localStorage.getItem("token") === null){
+            setInfo({ role: "NULL", name: "NULL" });
+            setDecode({ role: "NULL", name: "NULL" });
+        });
+
+        if (localStorage.getItem("token") === null) {
             setClicked(false);
         }
-    }
-    const [decode,setDecode]=useState({role: "NULL", name:"NULL"});
-    const [info, setInfo] = useState({role: "NULL", name: "NULL"})
-    const [status, setStatus] = useState(false);
+    };
+
     useEffect(() => {
         if (localStorage.getItem("token") !== null) {
-            const token= localStorage.getItem("token");
-            setDecode(jwt_decode(token)) ;
-            setInfo(jwt_decode(token)) ;
+            const token = localStorage.getItem("token");
+            const decodedToken = jwt_decode(token);
+
+            setDecode(decodedToken);
+            setInfo(decodedToken);
             setStatus(true);
-            console.log(info);
         }
-        console.log(info);
     }, [status, auth.login]);
 
-        return (
-            <nav className="NavbarItems">
-                <header className="App-header">
-                    {/*<ul className={clicked ? "nav-menu-active:":"li2"}>*/}
-                    <ul className="li2">
+    return (
+        <nav className="NavbarItems">
+            <header className="App-header">
+                <ul className={clicked ? "li2 li2Active" : "li2"}>
+                    {decode.role === "ADMIN" ? (
+                        <li className="nav">
+                            <i className="fa fa-user" />
+                            <Link className="a" to="/admin" onClick={handleClick}>
+                                Admin panel
+                            </Link>
+                        </li>
+                    ) : null}
 
-                        {decode.role==="ADMIN"?(
-                            <li className={"nav"}>
-                                <i className="fa fa-user"></i>
-                                <Link className='a' to='/admin' onClick={handleClick}>
-                                    adminPanel
-                                </Link>
-                            </li>
-                        ):null}
+                    <li className="nav">
+                        <i className="fa fa-question-circle" />
+                        <Link className="a" to="/Help" onClick={handleClick}>
+                            Help
+                        </Link>
+                    </li>
 
-                       <li className={"nav"}>
-                           <i className="fa fa-question-circle" styleName={"icon"}></i>
-                           <Link className='a' to='/Help' onClick={handleClick}>
-                               Help
-                           </Link>
-                       </li>
+                    {auth.login ? (
+                        <li className="nav">
+                            <i className="fa fa-user" />
+                            <Link className="a" to="/myAcount" onClick={handleClick}>
+                                {decode.name}
+                            </Link>
+                        </li>
+                    ) : null}
 
-                        {(auth.login) ? (
+                    {auth.login ? (
+                        <li className="nav">
+                            <i className="fa fa-sign-out" />
+                            <Link className="a" to="/home" onClick={handleLogout}>
+                                Logout
+                            </Link>
+                        </li>
+                    ) : (
+                        <li className="nav">
+                            <i className="fa fa-sign-in" />
+                            <Link className="a" to="/login" onClick={handleClick}>
+                                Login / Register
+                            </Link>
+                        </li>
+                    )}
+                </ul>
 
-                            <li className={"nav"}>
-                                <i className="fa fa-user"></i>
-                                <Link className='a' to='/myAcount' onClick={handleClick}>
-                                    {decode.name}
-                                </Link>
-                            </li>
+                <button className="nav-icon" type="button" onClick={handleClick} aria-label="Open menu">
+                    <span />
+                    <span />
+                    <span />
+                </button>
+            </header>
 
-                        ) : (
-                            null
+            <div className="Search">
+                <Link className="logoLink" to="/home">
+                    <img src={logo3} alt="Bookstore logo" />
+                </Link>
 
-                        )}
+                <div className="searchBox">
+                    <i className="fa fa-search" />
+                    <input type="text" placeholder="Search" name="search" />
+                </div>
 
-                        {(auth.login) ? (
-                            <li className={"nav"}>
-                                <i className="fa fa-user"></i>
-                                <Link className='a' to='/home' onClick={handleLogout}>
-                                    logout
-                                </Link>
-                            </li>
+                <Link className="cartLink" to="/Cart">
+                    <i className="fa fa-cart-arrow-down" />
+                    <span>Cart</span>
+                </Link>
+            </div>
 
-                        ) : (
-                            <li className={"nav"}>
-                                <i className={"fa fa-sign-in"}  ></i>
-                                <Link className='a' to='/login' onClick={handleClick}>
-                                    Login/Register
-                                </Link>
-                            </li>
+            <ul className="navi">
+                <li>
+                    <Link className="a" to="/home">
+                        Home
+                    </Link>
+                </li>
 
-                        )}
-                    </ul>
-                    <div className="nav-icon" onClick={handleClick}></div>
-                </header>
-                    <div className="Search">
+                <li>
+                    <Link className="a" to="/ebooks">
+                        Ebooks
+                    </Link>
+                </li>
 
-                        <img src={logo3} alt=""/>
+                <li>
+                    <Link className="a" to="/AudioBooks">
+                        Audiobooks
+                    </Link>
+                </li>
 
-                        <input type="text" placeholder="search" name="serch"></input>
+                <li>
+                    <Link className="a" to="/ForRent">
+                        For rent
+                    </Link>
+                </li>
 
-                        <p>
-                            <i className="fa fa-cart-arrow-down"></i>
-                            <div className={"li3"}>
-                                <a className={"nav-links"} href={"Cart"}>{"Cart"}
+                <li>
+                    <Link className="a" to="/Coursebook">
+                        Coursebooks
+                    </Link>
+                </li>
 
-                                </a>
-                            </div>
+                <li>
+                    <Link className="a" to="/Comics">
+                        Comics
+                    </Link>
+                </li>
+            </ul>
+        </nav>
+    );
+}
 
-                        </p>
-                    </div>
-                        <ul className={"navi"}>
-                            <li>
-                                <Link className='a' to='/home'>
-                                    Home
-                                </Link>
-                            </li>
-                            <li>
-                                <Link className='a' to='/ebooks'>
-                                    Ebooks
-                                </Link>
-
-                            </li>
-                            <li>
-                                <Link className='a' to='/AudioBooks'>
-                                   AudioBooks
-                                </Link>
-
-                            </li>
-                            <li>
-                                <Link className='a' to='/ForRent'>
-                                   ForRent
-                                </Link>
-                                <Link className='a' to='/Coursebook'>
-                                    Coursebook
-                                </Link>
-                                <Link className='a' to='/Comics'>
-                                    Comics
-                                </Link>
-                            </li>
-                        </ul>
-            </nav>
-
-
-        )
-    }
-
-export default Navbar
+export default Navbar;

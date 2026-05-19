@@ -1,27 +1,86 @@
 .PageFooter {
-    border: 1px solid #707070;
-    background-color: #CD8d8b ;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 32px;
+    align-items: center;
+    padding: 34px clamp(18px, 5vw, 72px);
+    border-top: 1px solid rgba(148, 163, 184, 0.24);
+    background:
+            radial-gradient(circle at top left, rgba(249, 115, 22, 0.22), transparent 34%),
+            linear-gradient(135deg, #111827, #1f2937);
+    color: #ffffff;
+}
+
+.footerBrand {
     display: flex;
     flex-direction: column;
-    height: 12em;
-    align-items: end;
+    gap: 14px;
 }
-.foot{
-    margin-left: 5em;
+
+.footerBrand img {
+    width: 92px;
+    height: auto;
+    margin: 0;
+    object-fit: contain;
+    filter: drop-shadow(0 12px 26px rgba(0, 0, 0, 0.24));
+}
+
+.footerBrand p {
+    max-width: 420px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.foot {
     display: flex;
     flex-direction: column;
+    gap: 12px;
+    min-width: 300px;
+    padding: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
 }
-.text{
+
+.foot h3 {
+    margin: 0 0 6px;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.foot span {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 15px;
+    word-break: break-word;
 }
-i{
-    margin-top: 10px;
-    font-size: xxx-large;
+
+.foot i {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin: 0;
+    border-radius: 12px;
+    background: rgba(249, 115, 22, 0.16);
+    color: #fdba74;
+    font-size: 15px;
 }
-img{
-    margin-top: 1em;
-}
-.fa{
-    font-size: large;
+
+@media screen and (max-width: 760px) {
+    .PageFooter {
+        grid-template-columns: 1fr;
+    }
+
+    .foot {
+        min-width: 0;
+    }
 }
